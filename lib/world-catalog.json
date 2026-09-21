@@ -1,0 +1,3369 @@
+{
+  "unmatched": [],
+  "count": 177,
+  "countries": [
+    {
+      "slug": "australia",
+      "name": "Австралия",
+      "mapName": "Австралия",
+      "mapKeys": [
+        "Australia"
+      ],
+      "region": "Океания",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "AU",
+      "mapCoordinates": [
+        -27,
+        133
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "austria",
+      "name": "Австрия",
+      "mapName": "Австрия",
+      "mapKeys": [
+        "Austria"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "AT",
+      "mapCoordinates": [
+        47.33333333,
+        13.33333333
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "azerbaijan",
+      "name": "Азербайджан",
+      "mapName": "Азербайджан",
+      "mapKeys": [
+        "Azerbaijan"
+      ],
+      "region": "Ближний Восток",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "AZ",
+      "mapCoordinates": [
+        40.5,
+        47.5
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "albania",
+      "name": "Албания",
+      "mapName": "Албания",
+      "mapKeys": [
+        "Albania"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "AL",
+      "mapCoordinates": [
+        41,
+        20
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "algeria",
+      "name": "Алжир",
+      "mapName": "Алжир",
+      "mapKeys": [
+        "Algeria"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "DZ",
+      "mapCoordinates": [
+        28,
+        3
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "angola",
+      "name": "Ангола",
+      "mapName": "Ангола",
+      "mapKeys": [
+        "Angola"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "AO",
+      "mapCoordinates": [
+        -12.5,
+        18.5
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "antarctica",
+      "name": "Антарктида",
+      "mapName": "Антарктида",
+      "mapKeys": [
+        "Antarctica"
+      ],
+      "region": "Антарктика",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "AQ",
+      "mapCoordinates": [
+        -82,
+        0
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "argentina",
+      "name": "Аргентина",
+      "mapName": "Аргентина",
+      "mapKeys": [
+        "Argentina"
+      ],
+      "region": "Южная Америка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "AR",
+      "mapCoordinates": [
+        -34,
+        -64
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "armenia",
+      "name": "Армения",
+      "mapName": "Армения",
+      "mapKeys": [
+        "Armenia"
+      ],
+      "region": "Ближний Восток",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "AM",
+      "mapCoordinates": [
+        40,
+        45
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "afghanistan",
+      "name": "Афганистан",
+      "mapName": "Афганистан",
+      "mapKeys": [
+        "Afghanistan"
+      ],
+      "region": "Азия",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "AF",
+      "mapCoordinates": [
+        33,
+        65
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "bahamas",
+      "name": "Багамские Острова",
+      "mapName": "Багамские Острова",
+      "mapKeys": [
+        "Bahamas"
+      ],
+      "region": "Карибский бассейн",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "BS",
+      "mapCoordinates": [
+        24.25,
+        -76
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "bangladesh",
+      "name": "Бангладеш",
+      "mapName": "Бангладеш",
+      "mapKeys": [
+        "Bangladesh"
+      ],
+      "region": "Азия",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "BD",
+      "mapCoordinates": [
+        24,
+        90
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "belarus",
+      "name": "Беларусь",
+      "mapName": "Беларусь",
+      "mapKeys": [
+        "Belarus"
+      ],
+      "region": "Восточная Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "BY",
+      "mapCoordinates": [
+        53,
+        28
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "belize",
+      "name": "Белиз",
+      "mapName": "Белиз",
+      "mapKeys": [
+        "Belize"
+      ],
+      "region": "Центральная Америка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "BZ",
+      "mapCoordinates": [
+        17.25,
+        -88.75
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "belgium",
+      "name": "Бельгия",
+      "mapName": "Бельгия",
+      "mapKeys": [
+        "Belgium"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "BE",
+      "mapCoordinates": [
+        50.83333333,
+        4
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "benin",
+      "name": "Бенин",
+      "mapName": "Бенин",
+      "mapKeys": [
+        "Benin"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "BJ",
+      "mapCoordinates": [
+        9.5,
+        2.25
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "bulgaria",
+      "name": "Болгария",
+      "mapName": "Болгария",
+      "mapKeys": [
+        "Bulgaria"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "BG",
+      "mapCoordinates": [
+        43,
+        25
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "bolivia",
+      "name": "Боливия",
+      "mapName": "Боливия",
+      "mapKeys": [
+        "Bolivia"
+      ],
+      "region": "Южная Америка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "BO",
+      "mapCoordinates": [
+        -17,
+        -65
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "bosnia-and-herzegovina",
+      "name": "Босния и Герцеговина",
+      "mapName": "Босния и Герцеговина",
+      "mapKeys": [
+        "Bosnia and Herz."
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "BA",
+      "mapCoordinates": [
+        44,
+        18
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "botswana",
+      "name": "Ботсвана",
+      "mapName": "Ботсвана",
+      "mapKeys": [
+        "Botswana"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "BW",
+      "mapCoordinates": [
+        -22,
+        24
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "brazil",
+      "name": "Бразилия",
+      "mapName": "Бразилия",
+      "mapKeys": [
+        "Brazil"
+      ],
+      "region": "Южная Америка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "BR",
+      "mapCoordinates": [
+        -10,
+        -55
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "brunei",
+      "name": "Бруней",
+      "mapName": "Бруней",
+      "mapKeys": [
+        "Brunei"
+      ],
+      "region": "Юго-Восточная Азия",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "BN",
+      "mapCoordinates": [
+        4.5,
+        114.66666666
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "burkina-faso",
+      "name": "Буркина-Фасо",
+      "mapName": "Буркина-Фасо",
+      "mapKeys": [
+        "Burkina Faso"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "BF",
+      "mapCoordinates": [
+        13,
+        -2
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "burundi",
+      "name": "Бурунди",
+      "mapName": "Бурунди",
+      "mapKeys": [
+        "Burundi"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "BI",
+      "mapCoordinates": [
+        -3.5,
+        30
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "bhutan",
+      "name": "Бутан",
+      "mapName": "Бутан",
+      "mapKeys": [
+        "Bhutan"
+      ],
+      "region": "Азия",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "BT",
+      "mapCoordinates": [
+        27.5,
+        90.5
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "vanuatu",
+      "name": "Вануату",
+      "mapName": "Вануату",
+      "mapKeys": [
+        "Vanuatu"
+      ],
+      "region": "Океания",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "VU",
+      "mapCoordinates": [
+        -16,
+        167
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "united-kingdom",
+      "name": "Великобритания",
+      "mapName": "Великобритания",
+      "mapKeys": [
+        "United Kingdom"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "GB",
+      "mapCoordinates": [
+        54,
+        -2
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "hungary",
+      "name": "Венгрия",
+      "mapName": "Венгрия",
+      "mapKeys": [
+        "Hungary"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "HU",
+      "mapCoordinates": [
+        47,
+        20
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "venezuela",
+      "name": "Венесуэла",
+      "mapName": "Венесуэла",
+      "mapKeys": [
+        "Venezuela"
+      ],
+      "region": "Южная Америка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "VE",
+      "mapCoordinates": [
+        8,
+        -66
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "timor-leste",
+      "name": "Восточный Тимор",
+      "mapName": "Восточный Тимор",
+      "mapKeys": [
+        "Timor-Leste"
+      ],
+      "region": "Юго-Восточная Азия",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "TL",
+      "mapCoordinates": [
+        -8.83333333,
+        125.91666666
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "vietnam",
+      "name": "Вьетнам",
+      "mapName": "Вьетнам",
+      "mapKeys": [
+        "Vietnam"
+      ],
+      "region": "Юго-Восточная Азия",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "VN",
+      "mapCoordinates": [
+        16.16666666,
+        107.83333333
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "gabon",
+      "name": "Габон",
+      "mapName": "Габон",
+      "mapKeys": [
+        "Gabon"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "GA",
+      "mapCoordinates": [
+        -1,
+        11.75
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "haiti",
+      "name": "Гаити",
+      "mapName": "Гаити",
+      "mapKeys": [
+        "Haiti"
+      ],
+      "region": "Карибский бассейн",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "HT",
+      "mapCoordinates": [
+        19,
+        -72.41666666
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "guyana",
+      "name": "Гайана",
+      "mapName": "Гайана",
+      "mapKeys": [
+        "Guyana"
+      ],
+      "region": "Южная Америка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "GY",
+      "mapCoordinates": [
+        5,
+        -59
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "gambia",
+      "name": "Гамбия",
+      "mapName": "Гамбия",
+      "mapKeys": [
+        "Gambia"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "GM",
+      "mapCoordinates": [
+        13.46666666,
+        -16.56666666
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "ghana",
+      "name": "Гана",
+      "mapName": "Гана",
+      "mapKeys": [
+        "Ghana"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "GH",
+      "mapCoordinates": [
+        8,
+        -2
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "guatemala",
+      "name": "Гватемала",
+      "mapName": "Гватемала",
+      "mapKeys": [
+        "Guatemala"
+      ],
+      "region": "Центральная Америка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "GT",
+      "mapCoordinates": [
+        15.5,
+        -90.25
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "guinea",
+      "name": "Гвинея",
+      "mapName": "Гвинея",
+      "mapKeys": [
+        "Guinea"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "GN",
+      "mapCoordinates": [
+        11,
+        -10
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "guinea-bissau",
+      "name": "Гвинея-Бисау",
+      "mapName": "Гвинея-Бисау",
+      "mapKeys": [
+        "Guinea-Bissau"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "GW",
+      "mapCoordinates": [
+        12,
+        -15
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "germany",
+      "name": "Германия",
+      "mapName": "Германия",
+      "mapKeys": [
+        "Germany"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "DE",
+      "mapCoordinates": [
+        51,
+        9
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "honduras",
+      "name": "Гондурас",
+      "mapName": "Гондурас",
+      "mapKeys": [
+        "Honduras"
+      ],
+      "region": "Центральная Америка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "HN",
+      "mapCoordinates": [
+        15,
+        -86.5
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "greenland",
+      "name": "Гренландия",
+      "mapName": "Гренландия",
+      "mapKeys": [
+        "Greenland"
+      ],
+      "region": "Северная Америка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "GL",
+      "mapCoordinates": [
+        72,
+        -40
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "greece",
+      "name": "Греция",
+      "mapName": "Греция",
+      "mapKeys": [
+        "Greece"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "GR",
+      "mapCoordinates": [
+        39,
+        22
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "georgia",
+      "name": "Грузия",
+      "mapName": "Грузия",
+      "mapKeys": [
+        "Georgia"
+      ],
+      "region": "Ближний Восток",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "GE",
+      "mapCoordinates": [
+        42,
+        43.5
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "denmark",
+      "name": "Дания",
+      "mapName": "Дания",
+      "mapKeys": [
+        "Denmark"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "DK",
+      "mapCoordinates": [
+        56,
+        10
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "dr-congo",
+      "name": "Демократическая Республика Конго",
+      "mapName": "Демократическая Республика Конго",
+      "mapKeys": [
+        "Dem. Rep. Congo"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "CD",
+      "mapCoordinates": [
+        0,
+        25
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "djibouti",
+      "name": "Джибути",
+      "mapName": "Джибути",
+      "mapKeys": [
+        "Djibouti"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "DJ",
+      "mapCoordinates": [
+        11.5,
+        43
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "dominican-republic",
+      "name": "Доминиканская Республика",
+      "mapName": "Доминиканская Республика",
+      "mapKeys": [
+        "Dominican Rep."
+      ],
+      "region": "Карибский бассейн",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "DO",
+      "mapCoordinates": [
+        19,
+        -70.66666666
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "egypt",
+      "name": "Египет",
+      "mapName": "Египет",
+      "mapKeys": [
+        "Egypt"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "EG",
+      "mapCoordinates": [
+        27,
+        30
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "zambia",
+      "name": "Замбия",
+      "mapName": "Замбия",
+      "mapKeys": [
+        "Zambia"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "ZM",
+      "mapCoordinates": [
+        -15,
+        30
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "western-sahara",
+      "name": "Западная Сахара",
+      "mapName": "Западная Сахара",
+      "mapKeys": [
+        "W. Sahara"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "EH",
+      "mapCoordinates": [
+        24.5,
+        -13
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "zimbabwe",
+      "name": "Зимбабве",
+      "mapName": "Зимбабве",
+      "mapKeys": [
+        "Zimbabwe"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "ZW",
+      "mapCoordinates": [
+        -20,
+        30
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "israel",
+      "name": "Израиль",
+      "mapName": "Израиль",
+      "mapKeys": [
+        "Israel"
+      ],
+      "region": "Ближний Восток",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "IL",
+      "mapCoordinates": [
+        31.47,
+        35.13
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "india",
+      "name": "Индия",
+      "mapName": "Индия",
+      "mapKeys": [
+        "India"
+      ],
+      "region": "Азия",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "IN",
+      "mapCoordinates": [
+        20,
+        77
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "indonesia",
+      "name": "Индонезия",
+      "mapName": "Индонезия",
+      "mapKeys": [
+        "Indonesia"
+      ],
+      "region": "Юго-Восточная Азия",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "ID",
+      "mapCoordinates": [
+        -5,
+        120
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "jordan",
+      "name": "Иордания",
+      "mapName": "Иордания",
+      "mapKeys": [
+        "Jordan"
+      ],
+      "region": "Ближний Восток",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "JO",
+      "mapCoordinates": [
+        31,
+        36
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "iraq",
+      "name": "Ирак",
+      "mapName": "Ирак",
+      "mapKeys": [
+        "Iraq"
+      ],
+      "region": "Ближний Восток",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "IQ",
+      "mapCoordinates": [
+        33,
+        44
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "iran",
+      "name": "Иран",
+      "mapName": "Иран",
+      "mapKeys": [
+        "Iran"
+      ],
+      "region": "Азия",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "IR",
+      "mapCoordinates": [
+        32,
+        53
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "ireland",
+      "name": "Ирландия",
+      "mapName": "Ирландия",
+      "mapKeys": [
+        "Ireland"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "IE",
+      "mapCoordinates": [
+        53,
+        -8
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "iceland",
+      "name": "Исландия",
+      "mapName": "Исландия",
+      "mapKeys": [
+        "Iceland"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "IS",
+      "mapCoordinates": [
+        65,
+        -18
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "spain",
+      "name": "Испания",
+      "mapName": "Испания",
+      "mapKeys": [
+        "Spain"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "ES",
+      "mapCoordinates": [
+        40,
+        -4
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "italy",
+      "name": "Италия",
+      "mapName": "Италия",
+      "mapKeys": [
+        "Italy"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "IT",
+      "mapCoordinates": [
+        42.83333333,
+        12.83333333
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "yemen",
+      "name": "Йемен",
+      "mapName": "Йемен",
+      "mapKeys": [
+        "Yemen"
+      ],
+      "region": "Ближний Восток",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "YE",
+      "mapCoordinates": [
+        15,
+        48
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "kazakhstan",
+      "name": "Казахстан",
+      "mapName": "Казахстан",
+      "mapKeys": [
+        "Kazakhstan"
+      ],
+      "region": "Центральная Азия",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "KZ",
+      "mapCoordinates": [
+        48,
+        68
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "cambodia",
+      "name": "Камбоджа",
+      "mapName": "Камбоджа",
+      "mapKeys": [
+        "Cambodia"
+      ],
+      "region": "Юго-Восточная Азия",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "KH",
+      "mapCoordinates": [
+        13,
+        105
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "cameroon",
+      "name": "Камерун",
+      "mapName": "Камерун",
+      "mapKeys": [
+        "Cameroon"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "CM",
+      "mapCoordinates": [
+        6,
+        12
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "canada",
+      "name": "Канада",
+      "mapName": "Канада",
+      "mapKeys": [
+        "Canada"
+      ],
+      "region": "Северная Америка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "CA",
+      "mapCoordinates": [
+        60,
+        -95
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "qatar",
+      "name": "Катар",
+      "mapName": "Катар",
+      "mapKeys": [
+        "Qatar"
+      ],
+      "region": "Ближний Восток",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "QA",
+      "mapCoordinates": [
+        25.5,
+        51.25
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "kenya",
+      "name": "Кения",
+      "mapName": "Кения",
+      "mapKeys": [
+        "Kenya"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "KE",
+      "mapCoordinates": [
+        1,
+        38
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "cyprus",
+      "name": "Кипр",
+      "mapName": "Кипр",
+      "mapKeys": [
+        "Cyprus"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "CY",
+      "mapCoordinates": [
+        35,
+        33
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "kyrgyzstan",
+      "name": "Киргизия",
+      "mapName": "Киргизия",
+      "mapKeys": [
+        "Kyrgyzstan"
+      ],
+      "region": "Центральная Азия",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "KG",
+      "mapCoordinates": [
+        41,
+        75
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "china",
+      "name": "Китай",
+      "mapName": "Китай",
+      "mapKeys": [
+        "China"
+      ],
+      "region": "Азия",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "CN",
+      "mapCoordinates": [
+        35,
+        105
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "colombia",
+      "name": "Колумбия",
+      "mapName": "Колумбия",
+      "mapKeys": [
+        "Colombia"
+      ],
+      "region": "Южная Америка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "CO",
+      "mapCoordinates": [
+        4,
+        -72
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "kosovo",
+      "name": "Косово",
+      "mapName": "Косово",
+      "mapKeys": [
+        "Kosovo"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "XK",
+      "mapCoordinates": [
+        42.6,
+        20.9
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "costa-rica",
+      "name": "Коста-Рика",
+      "mapName": "Коста-Рика",
+      "mapKeys": [
+        "Costa Rica"
+      ],
+      "region": "Центральная Америка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "CR",
+      "mapCoordinates": [
+        10,
+        -84
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "ivory-coast",
+      "name": "Кот-д’Ивуар",
+      "mapName": "Кот-д’Ивуар",
+      "mapKeys": [
+        "Côte d'Ivoire"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "CI",
+      "mapCoordinates": [
+        8,
+        -5
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "cuba",
+      "name": "Куба",
+      "mapName": "Куба",
+      "mapKeys": [
+        "Cuba"
+      ],
+      "region": "Карибский бассейн",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "CU",
+      "mapCoordinates": [
+        21.5,
+        -80
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "kuwait",
+      "name": "Кувейт",
+      "mapName": "Кувейт",
+      "mapKeys": [
+        "Kuwait"
+      ],
+      "region": "Ближний Восток",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "KW",
+      "mapCoordinates": [
+        29.5,
+        45.75
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "laos",
+      "name": "Лаос",
+      "mapName": "Лаос",
+      "mapKeys": [
+        "Laos"
+      ],
+      "region": "Юго-Восточная Азия",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "LA",
+      "mapCoordinates": [
+        18,
+        105
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "latvia",
+      "name": "Латвия",
+      "mapName": "Латвия",
+      "mapKeys": [
+        "Latvia"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "LV",
+      "mapCoordinates": [
+        57,
+        25
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "lesotho",
+      "name": "Лесото",
+      "mapName": "Лесото",
+      "mapKeys": [
+        "Lesotho"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "LS",
+      "mapCoordinates": [
+        -29.5,
+        28.5
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "liberia",
+      "name": "Либерия",
+      "mapName": "Либерия",
+      "mapKeys": [
+        "Liberia"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "LR",
+      "mapCoordinates": [
+        6.5,
+        -9.5
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "lebanon",
+      "name": "Ливан",
+      "mapName": "Ливан",
+      "mapKeys": [
+        "Lebanon"
+      ],
+      "region": "Ближний Восток",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "LB",
+      "mapCoordinates": [
+        33.83333333,
+        35.83333333
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "libya",
+      "name": "Ливия",
+      "mapName": "Ливия",
+      "mapKeys": [
+        "Libya"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "LY",
+      "mapCoordinates": [
+        25,
+        17
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "lithuania",
+      "name": "Литва",
+      "mapName": "Литва",
+      "mapKeys": [
+        "Lithuania"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "LT",
+      "mapCoordinates": [
+        56,
+        24
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "luxembourg",
+      "name": "Люксембург",
+      "mapName": "Люксембург",
+      "mapKeys": [
+        "Luxembourg"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "LU",
+      "mapCoordinates": [
+        49.75,
+        6.16666666
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "mauritania",
+      "name": "Мавритания",
+      "mapName": "Мавритания",
+      "mapKeys": [
+        "Mauritania"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "MR",
+      "mapCoordinates": [
+        20,
+        -12
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "madagascar",
+      "name": "Мадагаскар",
+      "mapName": "Мадагаскар",
+      "mapKeys": [
+        "Madagascar"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "MG",
+      "mapCoordinates": [
+        -20,
+        47
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "malawi",
+      "name": "Малави",
+      "mapName": "Малави",
+      "mapKeys": [
+        "Malawi"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "MW",
+      "mapCoordinates": [
+        -13.5,
+        34
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "malaysia",
+      "name": "Малайзия",
+      "mapName": "Малайзия",
+      "mapKeys": [
+        "Malaysia"
+      ],
+      "region": "Юго-Восточная Азия",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "MY",
+      "mapCoordinates": [
+        2.5,
+        112.5
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "mali",
+      "name": "Мали",
+      "mapName": "Мали",
+      "mapKeys": [
+        "Mali"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "ML",
+      "mapCoordinates": [
+        17,
+        -4
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "morocco",
+      "name": "Марокко",
+      "mapName": "Марокко",
+      "mapKeys": [
+        "Morocco"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "MA",
+      "mapCoordinates": [
+        32,
+        -5
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "mexico",
+      "name": "Мексика",
+      "mapName": "Мексика",
+      "mapKeys": [
+        "Mexico"
+      ],
+      "region": "Северная Америка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "MX",
+      "mapCoordinates": [
+        23,
+        -102
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "mozambique",
+      "name": "Мозамбик",
+      "mapName": "Мозамбик",
+      "mapKeys": [
+        "Mozambique"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "MZ",
+      "mapCoordinates": [
+        -18.25,
+        35
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "moldova",
+      "name": "Молдавия",
+      "mapName": "Молдавия",
+      "mapKeys": [
+        "Moldova"
+      ],
+      "region": "Восточная Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "MD",
+      "mapCoordinates": [
+        47,
+        29
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "mongolia",
+      "name": "Монголия",
+      "mapName": "Монголия",
+      "mapKeys": [
+        "Mongolia"
+      ],
+      "region": "Азия",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "MN",
+      "mapCoordinates": [
+        46,
+        105
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "myanmar",
+      "name": "Мьянма",
+      "mapName": "Мьянма",
+      "mapKeys": [
+        "Myanmar"
+      ],
+      "region": "Юго-Восточная Азия",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "MM",
+      "mapCoordinates": [
+        22,
+        98
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "namibia",
+      "name": "Намибия",
+      "mapName": "Намибия",
+      "mapKeys": [
+        "Namibia"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "NA",
+      "mapCoordinates": [
+        -22,
+        17
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "nepal",
+      "name": "Непал",
+      "mapName": "Непал",
+      "mapKeys": [
+        "Nepal"
+      ],
+      "region": "Азия",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "NP",
+      "mapCoordinates": [
+        28,
+        84
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "niger",
+      "name": "Нигер",
+      "mapName": "Нигер",
+      "mapKeys": [
+        "Niger"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "NE",
+      "mapCoordinates": [
+        16,
+        8
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "nigeria",
+      "name": "Нигерия",
+      "mapName": "Нигерия",
+      "mapKeys": [
+        "Nigeria"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "NG",
+      "mapCoordinates": [
+        10,
+        8
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "netherlands",
+      "name": "Нидерланды",
+      "mapName": "Нидерланды",
+      "mapKeys": [
+        "Netherlands"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "NL",
+      "mapCoordinates": [
+        52.5,
+        5.75
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "nicaragua",
+      "name": "Никарагуа",
+      "mapName": "Никарагуа",
+      "mapKeys": [
+        "Nicaragua"
+      ],
+      "region": "Центральная Америка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "NI",
+      "mapCoordinates": [
+        13,
+        -85
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "new-zealand",
+      "name": "Новая Зеландия",
+      "mapName": "Новая Зеландия",
+      "mapKeys": [
+        "New Zealand"
+      ],
+      "region": "Океания",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "NZ",
+      "mapCoordinates": [
+        -41,
+        174
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "new-caledonia",
+      "name": "Новая Каледония",
+      "mapName": "Новая Каледония",
+      "mapKeys": [
+        "New Caledonia"
+      ],
+      "region": "Океания",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "NC",
+      "mapCoordinates": [
+        -21.5,
+        165.5
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "norway",
+      "name": "Норвегия",
+      "mapName": "Норвегия",
+      "mapKeys": [
+        "Norway"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "NO",
+      "mapCoordinates": [
+        62,
+        10
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "united-arab-emirates",
+      "name": "Объединённые Арабские Эмираты",
+      "mapName": "Объединённые Арабские Эмираты",
+      "mapKeys": [
+        "United Arab Emirates"
+      ],
+      "region": "Ближний Восток",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "AE",
+      "mapCoordinates": [
+        24,
+        54
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "oman",
+      "name": "Оман",
+      "mapName": "Оман",
+      "mapKeys": [
+        "Oman"
+      ],
+      "region": "Ближний Восток",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "OM",
+      "mapCoordinates": [
+        21,
+        57
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "pakistan",
+      "name": "Пакистан",
+      "mapName": "Пакистан",
+      "mapKeys": [
+        "Pakistan"
+      ],
+      "region": "Азия",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "PK",
+      "mapCoordinates": [
+        30,
+        70
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "palestine",
+      "name": "Палестина",
+      "mapName": "Палестина",
+      "mapKeys": [
+        "Palestine"
+      ],
+      "region": "Ближний Восток",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "PS",
+      "mapCoordinates": [
+        31.9,
+        35.2
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "panama",
+      "name": "Панама",
+      "mapName": "Панама",
+      "mapKeys": [
+        "Panama"
+      ],
+      "region": "Центральная Америка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "PA",
+      "mapCoordinates": [
+        9,
+        -80
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "papua-new-guinea",
+      "name": "Папуа — Новая Гвинея",
+      "mapName": "Папуа — Новая Гвинея",
+      "mapKeys": [
+        "Papua New Guinea"
+      ],
+      "region": "Океания",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "PG",
+      "mapCoordinates": [
+        -6,
+        147
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "paraguay",
+      "name": "Парагвай",
+      "mapName": "Парагвай",
+      "mapKeys": [
+        "Paraguay"
+      ],
+      "region": "Южная Америка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "PY",
+      "mapCoordinates": [
+        -23,
+        -58
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "peru",
+      "name": "Перу",
+      "mapName": "Перу",
+      "mapKeys": [
+        "Peru"
+      ],
+      "region": "Южная Америка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "PE",
+      "mapCoordinates": [
+        -10,
+        -76
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "poland",
+      "name": "Польша",
+      "mapName": "Польша",
+      "mapKeys": [
+        "Poland"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "PL",
+      "mapCoordinates": [
+        52,
+        20
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "portugal",
+      "name": "Португалия",
+      "mapName": "Португалия",
+      "mapKeys": [
+        "Portugal"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "PT",
+      "mapCoordinates": [
+        39.5,
+        -8
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "puerto-rico",
+      "name": "Пуэрто-Рико",
+      "mapName": "Пуэрто-Рико",
+      "mapKeys": [
+        "Puerto Rico"
+      ],
+      "region": "Карибский бассейн",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "PR",
+      "mapCoordinates": [
+        18.25,
+        -66.5
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "republic-of-the-congo",
+      "name": "Республика Конго",
+      "mapName": "Республика Конго",
+      "mapKeys": [
+        "Congo"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "CG",
+      "mapCoordinates": [
+        -1,
+        15
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "russia",
+      "name": "Россия",
+      "mapName": "Россия",
+      "mapKeys": [
+        "Russia"
+      ],
+      "region": "Восточная Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "RU",
+      "mapCoordinates": [
+        60,
+        100
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "rwanda",
+      "name": "Руанда",
+      "mapName": "Руанда",
+      "mapKeys": [
+        "Rwanda"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "RW",
+      "mapCoordinates": [
+        -2,
+        30
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "romania",
+      "name": "Румыния",
+      "mapName": "Румыния",
+      "mapKeys": [
+        "Romania"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "RO",
+      "mapCoordinates": [
+        46,
+        25
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "el-salvador",
+      "name": "Сальвадор",
+      "mapName": "Сальвадор",
+      "mapKeys": [
+        "El Salvador"
+      ],
+      "region": "Центральная Америка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "SV",
+      "mapCoordinates": [
+        13.83333333,
+        -88.91666666
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "saudi-arabia",
+      "name": "Саудовская Аравия",
+      "mapName": "Саудовская Аравия",
+      "mapKeys": [
+        "Saudi Arabia"
+      ],
+      "region": "Ближний Восток",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "SA",
+      "mapCoordinates": [
+        25,
+        45
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "eswatini",
+      "name": "Свазиленд",
+      "mapName": "Свазиленд",
+      "mapKeys": [
+        "eSwatini"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "SZ",
+      "mapCoordinates": [
+        -26.5,
+        31.5
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "north-korea",
+      "name": "Северная Корея",
+      "mapName": "Северная Корея",
+      "mapKeys": [
+        "North Korea"
+      ],
+      "region": "Азия",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "KP",
+      "mapCoordinates": [
+        40,
+        127
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "north-macedonia",
+      "name": "Северная Македония",
+      "mapName": "Северная Македония",
+      "mapKeys": [
+        "Macedonia"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "MK",
+      "mapCoordinates": [
+        41.83333333,
+        22
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "northern-cyprus",
+      "name": "Северный Кипр",
+      "mapName": "Северный Кипр",
+      "mapKeys": [
+        "N. Cyprus"
+      ],
+      "region": "Азия",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "XX",
+      "mapCoordinates": [
+        35.2,
+        33.6
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "senegal",
+      "name": "Сенегал",
+      "mapName": "Сенегал",
+      "mapKeys": [
+        "Senegal"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "SN",
+      "mapCoordinates": [
+        14,
+        -14
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "serbia",
+      "name": "Сербия",
+      "mapName": "Сербия",
+      "mapKeys": [
+        "Serbia"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "RS",
+      "mapCoordinates": [
+        44,
+        21
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "syria",
+      "name": "Сирия",
+      "mapName": "Сирия",
+      "mapKeys": [
+        "Syria"
+      ],
+      "region": "Ближний Восток",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "SY",
+      "mapCoordinates": [
+        35,
+        38
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "slovakia",
+      "name": "Словакия",
+      "mapName": "Словакия",
+      "mapKeys": [
+        "Slovakia"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "SK",
+      "mapCoordinates": [
+        48.66666666,
+        19.5
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "slovenia",
+      "name": "Словения",
+      "mapName": "Словения",
+      "mapKeys": [
+        "Slovenia"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "SI",
+      "mapCoordinates": [
+        46.11666666,
+        14.81666666
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "united-states",
+      "name": "Соединённые Штаты Америки",
+      "mapName": "Соединённые Штаты Америки",
+      "mapKeys": [
+        "United States of America"
+      ],
+      "region": "Северная Америка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "US",
+      "mapCoordinates": [
+        38,
+        -97
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "solomon-islands",
+      "name": "Соломоновы Острова",
+      "mapName": "Соломоновы Острова",
+      "mapKeys": [
+        "Solomon Is."
+      ],
+      "region": "Океания",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "SB",
+      "mapCoordinates": [
+        -8,
+        159
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "somalia",
+      "name": "Сомали",
+      "mapName": "Сомали",
+      "mapKeys": [
+        "Somalia"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "SO",
+      "mapCoordinates": [
+        10,
+        49
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "somaliland",
+      "name": "Сомалиленд",
+      "mapName": "Сомалиленд",
+      "mapKeys": [
+        "Somaliland"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "XX",
+      "mapCoordinates": [
+        9.55,
+        44.05
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "sudan",
+      "name": "Судан",
+      "mapName": "Судан",
+      "mapKeys": [
+        "Sudan"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "SD",
+      "mapCoordinates": [
+        15,
+        30
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "suriname",
+      "name": "Суринам",
+      "mapName": "Суринам",
+      "mapKeys": [
+        "Suriname"
+      ],
+      "region": "Южная Америка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "SR",
+      "mapCoordinates": [
+        4,
+        -56
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "sierra-leone",
+      "name": "Сьерра-Леоне",
+      "mapName": "Сьерра-Леоне",
+      "mapKeys": [
+        "Sierra Leone"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "SL",
+      "mapCoordinates": [
+        8.5,
+        -11.5
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "tajikistan",
+      "name": "Таджикистан",
+      "mapName": "Таджикистан",
+      "mapKeys": [
+        "Tajikistan"
+      ],
+      "region": "Центральная Азия",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "TJ",
+      "mapCoordinates": [
+        39,
+        71
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "thailand",
+      "name": "Таиланд",
+      "mapName": "Таиланд",
+      "mapKeys": [
+        "Thailand"
+      ],
+      "region": "Юго-Восточная Азия",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "TH",
+      "mapCoordinates": [
+        15,
+        100
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "taiwan",
+      "name": "Тайвань",
+      "mapName": "Тайвань",
+      "mapKeys": [
+        "Taiwan"
+      ],
+      "region": "Азия",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "TW",
+      "mapCoordinates": [
+        23.5,
+        121
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "tanzania",
+      "name": "Танзания",
+      "mapName": "Танзания",
+      "mapKeys": [
+        "Tanzania"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "TZ",
+      "mapCoordinates": [
+        -6,
+        35
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "togo",
+      "name": "Того",
+      "mapName": "Того",
+      "mapKeys": [
+        "Togo"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "TG",
+      "mapCoordinates": [
+        8,
+        1.16666666
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "trinidad-and-tobago",
+      "name": "Тринидад и Тобаго",
+      "mapName": "Тринидад и Тобаго",
+      "mapKeys": [
+        "Trinidad and Tobago"
+      ],
+      "region": "Карибский бассейн",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "TT",
+      "mapCoordinates": [
+        11,
+        -61
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "tunisia",
+      "name": "Тунис",
+      "mapName": "Тунис",
+      "mapKeys": [
+        "Tunisia"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "TN",
+      "mapCoordinates": [
+        34,
+        9
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "turkmenistan",
+      "name": "Туркмения",
+      "mapName": "Туркмения",
+      "mapKeys": [
+        "Turkmenistan"
+      ],
+      "region": "Центральная Азия",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "TM",
+      "mapCoordinates": [
+        40,
+        60
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "turkiye",
+      "name": "Турция",
+      "mapName": "Турция",
+      "mapKeys": [
+        "Turkey"
+      ],
+      "region": "Ближний Восток",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "TR",
+      "mapCoordinates": [
+        39,
+        35
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "uganda",
+      "name": "Уганда",
+      "mapName": "Уганда",
+      "mapKeys": [
+        "Uganda"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "UG",
+      "mapCoordinates": [
+        1,
+        32
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "uzbekistan",
+      "name": "Узбекистан",
+      "mapName": "Узбекистан",
+      "mapKeys": [
+        "Uzbekistan"
+      ],
+      "region": "Центральная Азия",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "UZ",
+      "mapCoordinates": [
+        41,
+        64
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "ukraine",
+      "name": "Украина",
+      "mapName": "Украина",
+      "mapKeys": [
+        "Ukraine"
+      ],
+      "region": "Восточная Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "UA",
+      "mapCoordinates": [
+        49,
+        32
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "uruguay",
+      "name": "Уругвай",
+      "mapName": "Уругвай",
+      "mapKeys": [
+        "Uruguay"
+      ],
+      "region": "Южная Америка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "UY",
+      "mapCoordinates": [
+        -33,
+        -56
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "fiji",
+      "name": "Фиджи",
+      "mapName": "Фиджи",
+      "mapKeys": [
+        "Fiji"
+      ],
+      "region": "Океания",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "FJ",
+      "mapCoordinates": [
+        -18,
+        175
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "philippines",
+      "name": "Филиппины",
+      "mapName": "Филиппины",
+      "mapKeys": [
+        "Philippines"
+      ],
+      "region": "Юго-Восточная Азия",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "PH",
+      "mapCoordinates": [
+        13,
+        122
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "finland",
+      "name": "Финляндия",
+      "mapName": "Финляндия",
+      "mapKeys": [
+        "Finland"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "FI",
+      "mapCoordinates": [
+        64,
+        26
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "falkland-islands",
+      "name": "Фолклендские острова",
+      "mapName": "Фолклендские острова",
+      "mapKeys": [
+        "Falkland Is."
+      ],
+      "region": "Южная Америка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "FK",
+      "mapCoordinates": [
+        -51.75,
+        -59
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "france",
+      "name": "Франция",
+      "mapName": "Франция",
+      "mapKeys": [
+        "France"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "FR",
+      "mapCoordinates": [
+        46,
+        2
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "french-southern-lands",
+      "name": "Французские Южные территории",
+      "mapName": "Французские Южные территории",
+      "mapKeys": [
+        "Fr. S. Antarctic Lands"
+      ],
+      "region": "Антарктика",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "TF",
+      "mapCoordinates": [
+        -49.25,
+        69.17
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "croatia",
+      "name": "Хорватия",
+      "mapName": "Хорватия",
+      "mapKeys": [
+        "Croatia"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "HR",
+      "mapCoordinates": [
+        45.16666666,
+        15.5
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "central-african-republic",
+      "name": "Центральноафриканская Республика",
+      "mapName": "Центральноафриканская Республика",
+      "mapKeys": [
+        "Central African Rep."
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "CF",
+      "mapCoordinates": [
+        7,
+        21
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "chad",
+      "name": "Чад",
+      "mapName": "Чад",
+      "mapKeys": [
+        "Chad"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "TD",
+      "mapCoordinates": [
+        15,
+        19
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "montenegro",
+      "name": "Черногория",
+      "mapName": "Черногория",
+      "mapKeys": [
+        "Montenegro"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "ME",
+      "mapCoordinates": [
+        42.5,
+        19.3
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "czechia",
+      "name": "Чехия",
+      "mapName": "Чехия",
+      "mapKeys": [
+        "Czechia"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "CZ",
+      "mapCoordinates": [
+        49.75,
+        15.5
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "chile",
+      "name": "Чили",
+      "mapName": "Чили",
+      "mapKeys": [
+        "Chile"
+      ],
+      "region": "Южная Америка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "CL",
+      "mapCoordinates": [
+        -30,
+        -71
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "switzerland",
+      "name": "Швейцария",
+      "mapName": "Швейцария",
+      "mapKeys": [
+        "Switzerland"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "CH",
+      "mapCoordinates": [
+        47,
+        8
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "sweden",
+      "name": "Швеция",
+      "mapName": "Швеция",
+      "mapKeys": [
+        "Sweden"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "SE",
+      "mapCoordinates": [
+        62,
+        15
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "sri-lanka",
+      "name": "Шри-Ланка",
+      "mapName": "Шри-Ланка",
+      "mapKeys": [
+        "Sri Lanka"
+      ],
+      "region": "Азия",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "LK",
+      "mapCoordinates": [
+        7,
+        81
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "ecuador",
+      "name": "Эквадор",
+      "mapName": "Эквадор",
+      "mapKeys": [
+        "Ecuador"
+      ],
+      "region": "Южная Америка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "EC",
+      "mapCoordinates": [
+        -2,
+        -77.5
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "equatorial-guinea",
+      "name": "Экваториальная Гвинея",
+      "mapName": "Экваториальная Гвинея",
+      "mapKeys": [
+        "Eq. Guinea"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "GQ",
+      "mapCoordinates": [
+        2,
+        10
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "eritrea",
+      "name": "Эритрея",
+      "mapName": "Эритрея",
+      "mapKeys": [
+        "Eritrea"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "ER",
+      "mapCoordinates": [
+        15,
+        39
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "estonia",
+      "name": "Эстония",
+      "mapName": "Эстония",
+      "mapKeys": [
+        "Estonia"
+      ],
+      "region": "Европа",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "EE",
+      "mapCoordinates": [
+        59,
+        26
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "ethiopia",
+      "name": "Эфиопия",
+      "mapName": "Эфиопия",
+      "mapKeys": [
+        "Ethiopia"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "ET",
+      "mapCoordinates": [
+        8,
+        38
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "south-korea",
+      "name": "Южная Корея",
+      "mapName": "Южная Корея",
+      "mapKeys": [
+        "South Korea"
+      ],
+      "region": "Азия",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "KR",
+      "mapCoordinates": [
+        37,
+        127.5
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "south-africa",
+      "name": "Южно-Африканская Республика",
+      "mapName": "Южно-Африканская Республика",
+      "mapKeys": [
+        "South Africa"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "ZA",
+      "mapCoordinates": [
+        -29,
+        24
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "south-sudan",
+      "name": "Южный Судан",
+      "mapName": "Южный Судан",
+      "mapKeys": [
+        "S. Sudan"
+      ],
+      "region": "Африка",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "SS",
+      "mapCoordinates": [
+        7,
+        30
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "jamaica",
+      "name": "Ямайка",
+      "mapName": "Ямайка",
+      "mapKeys": [
+        "Jamaica"
+      ],
+      "region": "Карибский бассейн",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "JM",
+      "mapCoordinates": [
+        18.25,
+        -77.5
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    },
+    {
+      "slug": "japan",
+      "name": "Япония",
+      "mapName": "Япония",
+      "mapKeys": [
+        "Japan"
+      ],
+      "region": "Азия",
+      "description": "Страница уже в каталоге — подробности появятся при наполнении.",
+      "highlights": [],
+      "imageUrl": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80",
+      "countryCode": "JP",
+      "mapCoordinates": [
+        36,
+        138
+      ],
+      "wiki": {},
+      "isPlaceholder": true
+    }
+  ]
+}
