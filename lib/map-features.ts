@@ -2,9 +2,9 @@
 
 export type MapFilterId = "beach" | "ski";
 
-export const MAP_FILTERS: { id: MapFilterId; label: string }[] = [
-  { id: "beach", label: "Пляжный отдых" },
-  { id: "ski", label: "Горнолыжные курорты" },
+export const MAP_FILTERS: { id: MapFilterId }[] = [
+  { id: "beach" },
+  { id: "ski" },
 ];
 
 /** ISO-коды стран с выраженным пляжным туризмом */
@@ -151,20 +151,73 @@ export function countryMatchesFilters(
 }
 
 /** Ступени шкалы температуры (°C) в палитре night-sakura */
-export const TEMP_LEGEND: { min: number; max: number; color: string; label: string }[] = [
-  { min: -Infinity, max: -20, color: "#2a1f3d", label: "ниже −20°" },
-  { min: -20, max: -10, color: "#3d2f55", label: "−20…−10°" },
-  { min: -10, max: 0, color: "#5a4570", label: "−10…0°" },
-  { min: 0, max: 10, color: "#7a5a78", label: "0…10°" },
-  { min: 10, max: 20, color: "#9a6a80", label: "10…20°" },
-  { min: 20, max: 25, color: "#b85f80", label: "20…25°" },
-  { min: 25, max: 30, color: "#d56089", label: "25…30°" },
-  { min: 30, max: Infinity, color: "#e28aa8", label: "выше 30°" },
+export const TEMP_LEGEND: {
+  min: number;
+  max: number;
+  color: string;
+  labelKey:
+    | "tempBelow20"
+    | "tempNeg20Neg10"
+    | "tempNeg10Zero"
+    | "temp0_10"
+    | "temp10_20"
+    | "temp20_25"
+    | "temp25_30"
+    | "tempAbove30";
+}[] = [
+  { min: -Infinity, max: -20, color: "#3b2a6b", labelKey: "tempBelow20" },
+  { min: -20, max: -10, color: "#4f3f8f", labelKey: "tempNeg20Neg10" },
+  { min: -10, max: 0, color: "#5c6bb5", labelKey: "tempNeg10Zero" },
+  { min: 0, max: 10, color: "#6a8fbf", labelKey: "temp0_10" },
+  { min: 10, max: 20, color: "#c4a06a", labelKey: "temp10_20" },
+  { min: 20, max: 25, color: "#d4786a", labelKey: "temp20_25" },
+  { min: 25, max: 30, color: "#e05a8a", labelKey: "temp25_30" },
+  { min: 30, max: Infinity, color: "#f078b0", labelKey: "tempAbove30" },
+];
+
+const TEMP_STOPS: Array<{ t: number; rgb: [number, number, number] }> = [
+  { t: -30, rgb: [45, 32, 90] },
+  { t: -20, rgb: [59, 42, 107] },
+  { t: -10, rgb: [79, 63, 143] },
+  { t: 0, rgb: [92, 107, 181] },
+  { t: 10, rgb: [106, 143, 191] },
+  { t: 18, rgb: [196, 160, 106] },
+  { t: 25, rgb: [212, 120, 106] },
+  { t: 30, rgb: [224, 90, 138] },
+  { t: 38, rgb: [240, 120, 176] },
 ];
 
 export function temperatureToColor(tempC: number): string {
-  for (const step of TEMP_LEGEND) {
-    if (tempC >= step.min && tempC < step.max) return step.color;
+  return temperatureToColorSmooth(tempC);
+}
+
+/** Плавная интерполяция по шкале — для heatmap без «ступенек». */
+export function temperatureToColorSmooth(tempC: number): string {
+  if (tempC <= TEMP_STOPS[0].t) {
+    return rgbToHex(TEMP_STOPS[0].rgb);
   }
-  return TEMP_LEGEND[TEMP_LEGEND.length - 1].color;
+
+  const last = TEMP_STOPS[TEMP_STOPS.length - 1];
+  if (tempC >= last.t) {
+    return rgbToHex(last.rgb);
+  }
+
+  for (let i = 0; i < TEMP_STOPS.length - 1; i += 1) {
+    const a = TEMP_STOPS[i];
+    const b = TEMP_STOPS[i + 1];
+    if (tempC >= a.t && tempC <= b.t) {
+      const u = (tempC - a.t) / (b.t - a.t);
+      return rgbToHex([
+        Math.round(a.rgb[0] + (b.rgb[0] - a.rgb[0]) * u),
+        Math.round(a.rgb[1] + (b.rgb[1] - a.rgb[1]) * u),
+        Math.round(a.rgb[2] + (b.rgb[2] - a.rgb[2]) * u),
+      ]);
+    }
+  }
+
+  return rgbToHex(last.rgb);
+}
+
+function rgbToHex([r, g, b]: [number, number, number]): string {
+  return `#${[r, g, b].map((n) => n.toString(16).padStart(2, "0")).join("")}`;
 }

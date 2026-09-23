@@ -186,7 +186,7 @@ for (const mapName of mapNames) {
   }
 
   const ru = wc.translations?.rus?.common || wc.name.common;
-  // Keep catalog filters readable: continent-level regions, not every subregion.
+  // Keep catalog filters readable: continent-level + useful Americas / Middle East splits.
   let region = REGION_RU[wc.region] || wc.region || 'Мир';
   if (wc.region === 'Americas') {
     if (
@@ -198,14 +198,8 @@ for (const mapName of mapNames) {
     } else {
       region = 'Северная Америка';
     }
-  } else if (wc.region === 'Asia' && wc.subregion === 'South-Eastern Asia') {
-    region = 'Юго-Восточная Азия';
   } else if (wc.region === 'Asia' && wc.subregion === 'Western Asia') {
     region = 'Ближний Восток';
-  } else if (wc.region === 'Asia' && wc.subregion === 'Central Asia') {
-    region = 'Центральная Азия';
-  } else if (wc.region === 'Europe' && wc.subregion === 'Eastern Europe') {
-    region = 'Восточная Европа';
   }
   const [lat, lng] = wc.latlng;
 

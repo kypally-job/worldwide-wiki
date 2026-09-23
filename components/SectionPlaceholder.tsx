@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useT } from "@/lib/i18n/LocaleProvider";
 
 type PlaceholderAction = {
   href: string;
@@ -15,8 +18,12 @@ type SectionPlaceholderProps = {
 export default function SectionPlaceholder({
   title,
   description,
-  actions = [{ href: "/", label: "На карту" }],
+  actions,
 }: SectionPlaceholderProps) {
+  const t = useT();
+  const resolvedActions =
+    actions ?? [{ href: "/", label: t("placeholders.toMap") }];
+
   return (
     <div className="flex min-h-[calc(100dvh-var(--header-height))] items-center justify-center px-5 py-16">
       <section className="w-full max-w-md border border-line bg-panel p-8 text-center md:p-9">
@@ -29,7 +36,7 @@ export default function SectionPlaceholder({
         <p className="mt-4 text-base leading-7 text-sand/70">{description}</p>
 
         <div className="mt-7 grid gap-3">
-          {actions.map((action) => (
+          {resolvedActions.map((action) => (
             <Link
               key={`${action.href}-${action.label}`}
               href={action.href}

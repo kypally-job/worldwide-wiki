@@ -22,10 +22,17 @@ import {
   MAP_FILTERS,
   TEMP_LEGEND,
   countryMatchesFilters,
-  temperatureToColor,
   type MapFilterId,
 } from "@/lib/map-features";
-import { fetchCountryTemperatures } from "@/lib/map-weather";
+import {
+  fetchLandTemperatures,
+  nearestSampleTemp,
+  type TempSample,
+} from "@/lib/map-weather";
+import { getCountryName, getCountryRegion, getCountryDescription, getCountryHighlights } from "@/lib/i18n/country-locale";
+import { useLocale } from "@/lib/i18n/LocaleProvider";
+import { getCountryCover } from "@/lib/country-cover";
+import TemperatureHeatLayer from "@/components/TemperatureHeatLayer";
 
 const geoUrl =
   "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
@@ -132,6 +139,7 @@ export default function WorldMap({
 }: {
   initialCountrySlug?: string;
 }) {
+  const { locale, t } = useLocale();
   const mapContainerRef = useRef<HTMLDivElement | null>(null);
   const dragStateRef = useRef<DragState | null>(null);
 
@@ -147,9 +155,7 @@ export default function WorldMap({
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [activeFilters, setActiveFilters] = useState<MapFilterId[]>([]);
   const [showTemperature, setShowTemperature] = useState(false);
-  const [temperatures, setTemperatures] = useState<Record<string, number>>(
-    {},
-  );
+  const [tempSamples, setTempSamples] = useState<TempSample[]>([]);
   const [tempLoading, setTempLoading] = useState(false);
   const [tempError, setTempError] = useState("");
 
@@ -162,18 +168,21 @@ export default function WorldMap({
 
     return countries.filter((country) => {
       const searchableText = [
+        getCountryName(country, locale),
+        getCountryName(country, "ru"),
+        getCountryName(country, "en"),
         country.name,
         country.region,
         country.description,
         ...country.highlights,
-        ...Object.values(country.wiki),
+        ...country.mapKeys,
       ]
         .join(" ")
         .toLowerCase();
 
       return searchableText.includes(normalizedSearch);
     });
-  }, [search]);
+  }, [search, locale]);
 
   const getGeographyName = (geo: MapGeography): string => {
     const englishName = getGeographyEnglishName(geo);
@@ -181,7 +190,9 @@ export default function WorldMap({
       ? findCountryByMapKey(englishName)
       : undefined;
 
-    return projectCountry?.name || englishName || "Неизвестная страна";
+    return projectCountry
+      ? getCountryName(projectCountry, locale)
+      : englishName || t("map.unknownCountry");
   };
 
   const findProjectCountry = (
@@ -371,14 +382,22 @@ export default function WorldMap({
       return;
     }
 
+    if (tempSamples.length > 0) {
+      return;
+    }
+
     const controller = new AbortController();
     setTempLoading(true);
     setTempError("");
 
-    fetchCountryTemperatures(countries, controller.signal)
+    fetchLandTemperatures(countries, controller.signal)
       .then((data) => {
-        setTemperatures(data);
+        if (controller.signal.aborted) return;
+        setTempSamples(data);
         setTempLoading(false);
+        if (data.length === 0) {
+          setTempError(t("map.tempFailed"));
+        }
       })
       .catch((error: unknown) => {
         if (controller.signal.aborted) {
@@ -386,18 +405,18 @@ export default function WorldMap({
         }
 
         setTempLoading(false);
-        setTempError("Не удалось загрузить температуру");
+        setTempError(t("map.tempFailed"));
         setNotice(
           error instanceof Error
-            ? `Температура: ${error.message}`
-            : "Не удалось загрузить температуру",
+            ? `${t("map.temperature")}: ${error.message}`
+            : t("map.tempFailed"),
         );
       });
 
     return () => {
       controller.abort();
     };
-  }, [showTemperature]);
+  }, [showTemperature, tempSamples.length, t]);
 
   const handleCountryClick = (
     geo: MapGeography,
@@ -410,7 +429,7 @@ export default function WorldMap({
 
     if (!projectCountry) {
       closeCountryCard();
-      setNotice(`«${countryName}» пока нет в базе`);
+      setNotice(t("map.notInCatalog", { name: countryName }));
       return;
     }
 
@@ -659,19 +678,16 @@ export default function WorldMap({
                 );
                 const isFilteredOut =
                   activeFilters.length > 0 && isAvailable && !matchesFilter;
-                const tempC = projectCountry
-                  ? temperatures[projectCountry.countryCode]
-                  : undefined;
 
                 let fill: string;
                 if (!isAvailable) {
                   fill = "var(--map-unknown)";
-                } else if (
-                  showTemperature &&
-                  typeof tempC === "number" &&
-                  !isFilteredOut
-                ) {
-                  fill = temperatureToColor(tempC);
+                } else if (showTemperature && !isFilteredOut) {
+                  fill = isSelected
+                    ? "var(--map-known-active)"
+                    : isHovered
+                      ? "var(--map-known-hover)"
+                      : "var(--map-known)";
                 } else if (isSelected) {
                   fill = "var(--map-known-active)";
                 } else if (isHovered && !isFilteredOut) {
@@ -693,8 +709,22 @@ export default function WorldMap({
                     }
                     fill={fill}
                     stroke="var(--map-stroke)"
-                    strokeWidth={0.55}
-                    opacity={isFilteredOut ? 0.28 : 1}
+                    strokeWidth={
+                      showTemperature
+                        ? isHovered || isSelected
+                          ? 0.85
+                          : 0.45
+                        : 0.55
+                    }
+                    opacity={
+                      isFilteredOut
+                        ? 0.28
+                        : showTemperature
+                          ? isHovered || isSelected
+                            ? 0.42
+                            : 0.28
+                          : 1
+                    }
                     onMouseEnter={() => setHoveredCountry(countryName)}
                     onMouseLeave={() => setHoveredCountry("")}
                     onClick={(event) => {
@@ -712,6 +742,30 @@ export default function WorldMap({
               })
             }
           </Geographies>
+
+          {showTemperature && tempSamples.length > 0 && (
+            <TemperatureHeatLayer samples={tempSamples} zoom={view.zoom} />
+          )}
+
+          {showTemperature && (
+            <Geographies geography={geoUrl}>
+              {({ geographies }) =>
+                geographies.map((geo) => (
+                  <Geography
+                    key={`stroke-${(geo as MapGeography).rsmKey}`}
+                    geography={geo}
+                    fill="none"
+                    stroke="var(--map-stroke)"
+                    strokeWidth={0.5}
+                    style={{
+                      pointerEvents: "none",
+                      outline: "none",
+                    }}
+                  />
+                ))
+              }
+            </Geographies>
+          )}
         </ZoomableGroup>
       </ComposableMap>
 
@@ -724,7 +778,7 @@ export default function WorldMap({
             event.stopPropagation();
             handleZoomIn();
           }}
-          aria-label="Увеличить карту"
+          aria-label={t("map.zoomIn")}
           className="flex h-11 w-11 items-center justify-center rounded-lg border border-line bg-panel/80 text-xl leading-none text-sand shadow-lg backdrop-blur transition hover:border-terracotta hover:text-terracotta-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta"
         >
           <span
@@ -741,7 +795,7 @@ export default function WorldMap({
             event.stopPropagation();
             handleZoomOut();
           }}
-          aria-label="Уменьшить карту"
+          aria-label={t("map.zoomOut")}
           className="flex h-11 w-11 items-center justify-center rounded-lg border border-line bg-panel/80 text-xl leading-none text-sand shadow-lg backdrop-blur transition hover:border-terracotta hover:text-terracotta-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta"
         >
           <span
@@ -754,7 +808,7 @@ export default function WorldMap({
 
         <div className="group relative mt-1">
           <span className="pointer-events-none absolute left-[calc(100%+0.6rem)] top-1/2 hidden -translate-y-1/2 whitespace-nowrap rounded-lg border border-line bg-panel px-3 py-2 text-[13px] font-medium text-sand opacity-0 shadow-lg transition duration-150 group-hover:opacity-100 group-focus-within:opacity-100 sm:block">
-            случайная страна
+            {t("map.randomCountry")}
           </span>
           <button
             type="button"
@@ -762,7 +816,7 @@ export default function WorldMap({
               event.stopPropagation();
               handleRandomCountry();
             }}
-            aria-label="Случайная страна"
+            aria-label={t("map.randomCountry")}
             className="map-random-btn flex h-11 w-11 items-center justify-center rounded-lg border border-terracotta/45 bg-panel/90 text-terracotta shadow-lg backdrop-blur transition hover:border-terracotta hover:bg-terracotta/10 hover:text-terracotta-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta"
           >
             <svg
@@ -790,7 +844,7 @@ export default function WorldMap({
               event.stopPropagation();
               setFiltersOpen((open) => !open);
             }}
-            aria-label="Фильтры карты"
+            aria-label={t("map.filtersAria")}
             aria-expanded={filtersOpen}
             className={`flex h-11 w-11 items-center justify-center rounded-lg border shadow-lg backdrop-blur transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta ${
               filtersOpen || activeFilters.length > 0
@@ -818,7 +872,7 @@ export default function WorldMap({
           </button>
           {!filtersOpen && (
             <span className="pointer-events-none absolute left-[calc(100%+0.6rem)] top-1/2 z-10 hidden -translate-y-1/2 whitespace-nowrap rounded-lg border border-line bg-panel px-3 py-2 text-[13px] font-medium text-sand opacity-0 shadow-lg transition duration-150 group-hover:opacity-100 group-focus-within:opacity-100 sm:block">
-              фильтры
+              {t("map.filters")}
             </span>
           )}
 
@@ -828,7 +882,7 @@ export default function WorldMap({
               onClick={(event) => event.stopPropagation()}
             >
               <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-sand/50">
-                Фильтры
+                {t("map.filtersTitle")}
               </p>
               <ul className="flex flex-col gap-1.5">
                 {MAP_FILTERS.map((filter) => {
@@ -842,7 +896,7 @@ export default function WorldMap({
                           onChange={() => toggleFilter(filter.id)}
                           className="h-4 w-4 accent-[var(--night-sakura,#d56089)]"
                         />
-                        <span>{filter.label}</span>
+                        <span>{t(`map.${filter.id}`)}</span>
                       </label>
                     </li>
                   );
@@ -854,7 +908,7 @@ export default function WorldMap({
                   onClick={() => setActiveFilters([])}
                   className="mt-2 w-full rounded-lg px-2 py-1.5 text-left text-xs text-sand/60 transition hover:bg-surface-hover hover:text-sand"
                 >
-                  Сбросить
+                  {t("map.reset")}
                 </button>
               )}
             </div>
@@ -878,18 +932,18 @@ export default function WorldMap({
         >
           {showTemperature
             ? tempLoading
-              ? "Загрузка…"
-              : "Скрыть температуру"
-            : "Показать температуру"}
+              ? t("map.loading")
+              : t("map.hideTemperature")
+            : t("map.showTemperature")}
         </button>
 
         {showTemperature && (
           <div className="w-[11.5rem] rounded-xl border border-line bg-panel/95 p-3 shadow-xl backdrop-blur-md">
             <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-sand/50">
-              Температура
+              {t("map.temperature")}
             </p>
             {tempLoading && (
-              <p className="mb-2 text-xs text-sand/65">Загрузка…</p>
+              <p className="mb-2 text-xs text-sand/65">{t("map.loading")}</p>
             )}
             {tempError && !tempLoading && (
               <p className="mb-2 text-xs text-terracotta-light">{tempError}</p>
@@ -897,7 +951,7 @@ export default function WorldMap({
             <ul className="flex flex-col gap-1.5">
               {TEMP_LEGEND.map((step) => (
                 <li
-                  key={step.label}
+                  key={step.labelKey}
                   className="flex items-center gap-2 text-[12px] text-sand/85"
                 >
                   <span
@@ -905,12 +959,12 @@ export default function WorldMap({
                     style={{ backgroundColor: step.color }}
                     aria-hidden="true"
                   />
-                  <span>{step.label}</span>
+                  <span>{t(`map.${step.labelKey}`)}</span>
                 </li>
               ))}
             </ul>
             <p className="mt-2 text-[10px] leading-snug text-sand/45">
-              Текущая температура по координатам стран (Open-Meteo)
+              {t("map.tempHint")}
             </p>
           </div>
         )}
@@ -923,8 +977,14 @@ export default function WorldMap({
             {showTemperature &&
               (() => {
                 const hovered = findProjectCountry(hoveredCountry);
-                const temp =
-                  hovered && temperatures[hovered.countryCode];
+                if (!hovered?.mapCoordinates) return null;
+
+                const temp = nearestSampleTemp(
+                  tempSamples,
+                  hovered.mapCoordinates[0],
+                  hovered.mapCoordinates[1],
+                );
+
                 return typeof temp === "number" ? (
                   <span className="ml-2 text-sand/70">{temp}°C</span>
                 ) : null;
@@ -946,7 +1006,7 @@ export default function WorldMap({
             htmlFor="country-search"
             className="sr-only"
           >
-            Выберите страну
+            {t("map.searchLabel")}
           </label>
 
           <div className="flex items-center rounded-lg border border-line bg-panel/90 px-4 backdrop-blur-md transition focus-within:border-terracotta focus-within:ring-2 focus-within:ring-terracotta/25">
@@ -963,7 +1023,7 @@ export default function WorldMap({
                 event.preventDefault();
                 handleSearchSelect(searchResults[0]);
               }}
-              placeholder="Найти страну в каталоге"
+              placeholder={t("map.searchPlaceholder")}
               autoComplete="off"
               className="min-w-0 flex-1 bg-transparent py-3 text-sm font-medium text-sand outline-none placeholder:text-sand/60"
             />
@@ -972,7 +1032,7 @@ export default function WorldMap({
               <button
                 type="button"
                 onClick={() => setSearch("")}
-                aria-label="Очистить поиск"
+                aria-label={t("map.clearSearch")}
                 className="ml-2 flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sand/65 transition hover:bg-surface-hover hover:text-sand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta-light"
               >
                 ×
@@ -989,7 +1049,7 @@ export default function WorldMap({
                   onClick={() => handleSearchSelect(country)}
                   className="flex w-full items-center justify-between px-4 py-3 text-left text-sm font-medium text-sand transition hover:bg-terracotta/15 hover:text-terracotta-light focus-visible:bg-terracotta/15 focus-visible:outline-none"
                 >
-                  <span>{country.name}</span>
+                  <span>{getCountryName(country, locale)}</span>
 
                   <span
                     className="text-sand/45"
@@ -1004,7 +1064,7 @@ export default function WorldMap({
 
           {search.trim().length > 0 && searchResults.length === 0 && (
             <p className="mt-2 rounded-xl border border-line-strong bg-panel/95 px-4 py-3 text-sm text-sand/75 shadow-xl backdrop-blur-md">
-              В каталоге пока нет такой страны.
+              {t("map.noCountry")}
             </p>
           )}
         </div>
@@ -1014,7 +1074,7 @@ export default function WorldMap({
         <>
           <button
             type="button"
-            aria-label="Закрыть карточку страны"
+            aria-label={t("map.closeCard")}
             onClick={closeCountryCard}
             className="fixed inset-0 z-30 bg-ink/45 backdrop-blur-[2px] md:hidden"
           />
@@ -1033,7 +1093,9 @@ export default function WorldMap({
           {cardPosition && (
             <div
               role="dialog"
-              aria-label={`Информация о стране ${selectedCountry.name}`}
+              aria-label={t("map.countryInfo", {
+                name: getCountryName(selectedCountry, locale),
+              })}
               tabIndex={0}
               className={`absolute z-40 hidden w-[350px] max-w-[calc(100%-48px)] overflow-hidden rounded-xl border border-line bg-panel text-sand shadow-elevated backdrop-blur-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta-light md:block ${
                 isCardDragging
@@ -1078,13 +1140,20 @@ function CountryCardContent({
   onClose,
   compact = false,
 }: CountryCardContentProps) {
+  const { locale, t } = useLocale();
+  const name = getCountryName(country, locale);
+  const region = getCountryRegion(country, locale);
+  const description = getCountryDescription(country, locale);
+  const highlights = getCountryHighlights(country, locale);
+  const cover = getCountryCover(country);
+
   return (
     <div className="overflow-hidden bg-panel text-sand ring-1 ring-[var(--line)]">
       <div className="relative h-36 overflow-hidden md:h-36">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={country.imageUrl}
-          alt={country.name}
+          src={cover.src}
+          alt={name}
           className="h-full w-full object-cover"
         />
 
@@ -1093,7 +1162,7 @@ function CountryCardContent({
         <button
           type="button"
           onClick={onClose}
-          aria-label="Закрыть карточку страны"
+          aria-label={t("map.closeCard")}
           className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-lg border border-line-strong bg-[#0e0b14]/80 text-lg leading-none text-white transition hover:bg-terracotta focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta-light"
         >
           ×
@@ -1101,7 +1170,7 @@ function CountryCardContent({
 
         <div className="absolute bottom-4 left-4 right-4">
           <span className="text-[11px] font-medium uppercase tracking-[0.18em] text-sand/80">
-            {country.region}
+            {region}
           </span>
         </div>
       </div>
@@ -1112,22 +1181,22 @@ function CountryCardContent({
             compact ? "text-[1.7rem]" : "text-[2rem]"
           }`}
         >
-          {country.name}
+          {name}
         </h3>
 
         <p className="mt-3 text-[15px] leading-6 text-sand/75">
-          {country.description}
+          {description}
         </p>
 
         <p className="mt-3 text-[13px] tracking-wide text-sage">
-          {country.highlights.slice(0, 3).join(" · ")}
+          {highlights.slice(0, 3).join(" · ")}
         </p>
 
         <Link
           href={`/countries/${country.slug}`}
           className="mt-5 flex min-h-11 items-center justify-center rounded-lg bg-terracotta px-4 py-3 text-center text-sm font-semibold leading-none text-white transition hover:bg-terracotta-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta-light focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
         >
-          Перейти к стране
+          {t("map.goToCountry")}
           <span
             className="ml-2 text-lg"
             aria-hidden="true"

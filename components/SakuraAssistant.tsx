@@ -20,10 +20,10 @@ import {
   markSakuraDismissed,
   subscribeJourney,
 } from "@/lib/journey";
+import { useLocale, useT } from "@/lib/i18n/LocaleProvider";
 
 const MASCOT_SRC = "/mascot-sakura-v2.png";
 const AVATAR_SRC = "/mascot-sakura-avatar-v2.jpg";
-const INTRO_TIP = "Задай мне свой вопрос";
 
 type Presence = "pending" | "waiting" | "intro" | "button";
 
@@ -42,10 +42,15 @@ function resolvePresence(): Presence {
 export default function SakuraAssistant() {
   const pathname = usePathname();
   const panelId = useId();
+  const { locale } = useLocale();
+  const t = useT();
+  const introTip = t("assistant.tip");
   const [presence, setPresence] = useState<Presence>("pending");
   const [isOpen, setIsOpen] = useState(false);
   const [typedTip, setTypedTip] = useState("");
-  const [messages, setMessages] = useState<AssistantMessage[]>([createHelloMessage()]);
+  const [messages, setMessages] = useState<AssistantMessage[]>(() => [
+    createHelloMessage(locale),
+  ]);
   const [slots, setSlots] = useState<TripSlots | null>(null);
 
   useEffect(() => {
@@ -58,13 +63,22 @@ export default function SakuraAssistant() {
   }, []);
 
   useEffect(() => {
+    setMessages((current) => {
+      if (current.length === 1 && current[0]?.id === "hello") {
+        return [createHelloMessage(locale)];
+      }
+      return current;
+    });
+  }, [locale]);
+
+  useEffect(() => {
     if (presence !== "intro") {
       setTypedTip("");
       return;
     }
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setTypedTip(INTRO_TIP);
+      setTypedTip(introTip);
       return;
     }
 
@@ -80,9 +94,9 @@ export default function SakuraAssistant() {
 
       intervalId = window.setInterval(() => {
         index += 1;
-        setTypedTip(INTRO_TIP.slice(0, index));
+        setTypedTip(introTip.slice(0, index));
 
-        if (index >= INTRO_TIP.length) {
+        if (index >= introTip.length) {
           window.clearInterval(intervalId);
         }
       }, 110);
@@ -93,7 +107,7 @@ export default function SakuraAssistant() {
       window.clearTimeout(timeoutId);
       window.clearInterval(intervalId);
     };
-  }, [presence]);
+  }, [presence, introTip]);
 
   useEffect(() => {
     if (!isOpen || presence !== "button") {
@@ -133,11 +147,12 @@ export default function SakuraAssistant() {
 
     const activeId = getActiveThreadId();
     const existing = activeId ? getThread(activeId) : undefined;
+    const emptyTitle = t("assistant.newChat");
 
     if (existing) {
       saveThread({
         ...existing,
-        title: titleFromMessages(nextMessages),
+        title: titleFromMessages(nextMessages, emptyTitle),
         messages: nextMessages,
         slots: nextSlots,
       });
@@ -147,7 +162,7 @@ export default function SakuraAssistant() {
     createThread({
       messages: nextMessages,
       slots: nextSlots,
-      title: titleFromMessages(nextMessages),
+      title: titleFromMessages(nextMessages, emptyTitle),
     });
   };
 
@@ -175,7 +190,7 @@ export default function SakuraAssistant() {
         <div
           id={panelId}
           role="dialog"
-          aria-label="Чат с Сакурой"
+          aria-label={t("assistant.openChat")}
           aria-hidden={!showChat}
           {...(!showChat ? { inert: true } : {})}
           onWheel={(event) => {
@@ -207,12 +222,12 @@ export default function SakuraAssistant() {
           <button
             type="button"
             onClick={() => dismissIntro(true)}
-            aria-label="Задать вопрос Сакуре"
+            aria-label={t("assistant.askSakura")}
             className="absolute inset-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
           >
             <Image
               src={MASCOT_SRC}
-              alt="Сакура"
+              alt={t("assistant.name")}
               fill
               priority
               sizes="(min-width: 768px) 320px, 46vw"
@@ -228,19 +243,19 @@ export default function SakuraAssistant() {
                 className="min-w-0 whitespace-nowrap text-left font-heading text-[0.92rem] leading-none tracking-tight text-sand transition hover:text-terracotta focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta sm:text-[1.05rem]"
               >
                 <span>{typedTip}</span>
-                {typedTip.length < INTRO_TIP.length && (
+                {typedTip.length < introTip.length && (
                   <span
                     className="sakura-caret ml-0.5 inline-block h-[0.9em] w-[1.5px] translate-y-[0.08em] bg-sand align-baseline"
                     aria-hidden="true"
                   />
                 )}
-                <span className="sr-only">{INTRO_TIP}</span>
+                <span className="sr-only">{introTip}</span>
               </button>
 
               <button
                 type="button"
                 onClick={() => dismissIntro(false)}
-                aria-label="Скрыть Сакуру"
+                aria-label={t("assistant.hideSakura")}
                 className="flex h-8 w-8 shrink-0 items-center justify-center text-sand/45 transition hover:text-sand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta"
               >
                 <span className="relative block h-3 w-3" aria-hidden="true">
@@ -257,7 +272,7 @@ export default function SakuraAssistant() {
           onClick={() => setIsOpen(true)}
           aria-expanded={false}
           aria-controls={panelId}
-          aria-label="Открыть чат с Сакурой"
+          aria-label={t("assistant.openChat")}
           className="pointer-events-auto relative block h-14 w-14 overflow-hidden rounded-full border border-line bg-[#1a1220] shadow-[0_10px_28px_rgba(213,96,137,0.28)] ring-1 ring-terracotta/70 transition hover:ring-terracotta focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta-light"
         >
           <Image

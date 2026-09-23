@@ -1,71 +1,80 @@
-export const WIKI_SECTIONS = [
-  { id: "visa", title: "Въезд", summary: "Безвиз, виза, граница" },
-  { id: "before", title: "Подготовка", summary: "Документы и запреты" },
-  { id: "cities", title: "Города", summary: "Климат и где жить" },
-  { id: "health", title: "Медицина", summary: "Страховка и клиники" },
-  { id: "residence", title: "ВНЖ", summary: "Разрешение на жизнь" },
-  { id: "housing", title: "Жильё", summary: "Аренда, покупка, ЖКХ" },
-  { id: "banking", title: "Деньги", summary: "Счёт, карты, переводы" },
-  { id: "work", title: "Работа", summary: "Найм и право на труд" },
-  { id: "transport", title: "Транспорт", summary: "Город и между городами" },
-  { id: "connectivity", title: "Связь", summary: "SIM и интернет" },
-  { id: "gov", title: "Госорганы", summary: "Официальные сайты" },
-  { id: "overview", title: "О стране", summary: "Факты и устройство" },
-  { id: "education", title: "Учёба", summary: "Школы, вузы, язык" },
-  { id: "business", title: "Бизнес", summary: "ИП и компании" },
-  { id: "status", title: "ПМЖ", summary: "Долгий статус и паспорт" },
-  { id: "animals", title: "Животные", summary: "Питомцы и улица" },
-  { id: "communities", title: "Сообщества", summary: "Чаты и группы" },
-  { id: "videos", title: "Видео", summary: "Что смотреть" },
-  { id: "law", title: "Законы", summary: "Нормы и первоисточники" },
+import type { Locale } from "@/lib/i18n/config";
+import { getDictionary } from "@/lib/i18n/dictionaries";
+
+export const WIKI_SECTION_IDS = [
+  "overview",
+  "visa",
+  "before",
+  "cities",
+  "health",
+  "residence",
+  "status",
+  "housing",
+  "banking",
+  "connectivity",
+  "transport",
+  "work",
+  "business",
+  "education",
+  "animals",
+  "communities",
+  "gov",
+  "law",
+  "videos",
 ] as const;
 
-export type WikiSectionId = (typeof WIKI_SECTIONS)[number]["id"];
+export type WikiSectionId = (typeof WIKI_SECTION_IDS)[number];
+
+/** @deprecated prefer dictionary titles via getWikiSections(locale) */
+export const WIKI_SECTIONS = WIKI_SECTION_IDS.map((id) => ({
+  id,
+  title: getDictionary("ru").wiki.sections[id].title,
+  summary: getDictionary("ru").wiki.sections[id].summary,
+}));
 
 export type WikiContent = Partial<Record<WikiSectionId, string>>;
 
-export const WIKI_TOC_GROUPS = [
+export const WIKI_TOC_GROUP_IDS = [
   {
-    label: "Граница",
-    description: "Виза, документы, города",
-    ids: ["visa", "before", "cities"],
+    id: "start" as const,
+    ids: ["overview", "visa", "before", "cities"] as const,
   },
   {
-    label: "Оформление",
-    description: "Страховка и ВНЖ",
-    ids: ["health", "residence"],
+    id: "status" as const,
+    ids: ["health", "residence", "status"] as const,
   },
   {
-    label: "Быт",
-    description: "Жильё, деньги, работа",
-    ids: ["housing", "banking", "work", "transport", "connectivity", "gov"],
+    id: "daily" as const,
+    ids: ["housing", "banking", "connectivity", "transport"] as const,
   },
   {
-    label: "Справка",
-    description: "ПМЖ, законы, учёба",
-    ids: [
-      "overview",
-      "education",
-      "business",
-      "status",
-      "animals",
-      "communities",
-      "videos",
-      "law",
-    ],
+    id: "work" as const,
+    ids: ["work", "business", "education"] as const,
   },
-] as const satisfies ReadonlyArray<{
-  label: string;
-  description: string;
-  ids: readonly WikiSectionId[];
-}>;
+  {
+    id: "more" as const,
+    ids: ["animals", "communities", "gov", "law", "videos"] as const,
+  },
+];
+
+export const WIKI_TOC_GROUPS = WIKI_TOC_GROUP_IDS.map((group) => ({
+  label: getDictionary("ru").wiki.groups[group.id],
+  description: "",
+  ids: group.ids,
+}));
 
 export const OVERVIEW_FACTS = [
   { id: "area", title: "Размер" },
   { id: "population", title: "Население" },
   { id: "languages", title: "Языки" },
   { id: "religion", title: "Религия" },
-  { id: "government", title: "Действующая власть" },
+  { id: "government", title: "Власть" },
+] as const;
+
+export const SNAPSHOT_FACTS = [
+  { id: "area", title: "Размер" },
+  { id: "population", title: "Население" },
+  { id: "languages", title: "Языки" },
 ] as const;
 
 export type OverviewFactId = (typeof OVERVIEW_FACTS)[number]["id"];
@@ -133,21 +142,69 @@ export function getWikiSubsections(
     .map((line) => parseHeadingLine(line.slice(4), sectionId));
 }
 
+export function isWikiSectionFilled(text: string): boolean {
+  const trimmed = text.trim();
+
+  if (!trimmed) {
+    return false;
+  }
+
+  const withoutHeadings = trimmed
+    .replace(/^### .+$/gm, "")
+    .replace(/\n{2,}/g, "\n")
+    .trim();
+
+  if (!withoutHeadings) {
+    return false;
+  }
+
+  if (
+    /появится (на следующем шаге|при наполнении)|will (appear|be filled)/i.test(
+      withoutHeadings,
+    )
+  ) {
+    const useful = withoutHeadings
+      .split("\n")
+      .map((line) => line.trim())
+      .filter(
+        (line) =>
+          line.length > 0 &&
+          !/^появится/i.test(line) &&
+          !/will (appear|be filled)/i.test(line) &&
+          !/появится (на следующем шаге|при наполнении)/i.test(line),
+      );
+
+    return useful.length > 0;
+  }
+
+  return true;
+}
+
 export function getWikiSections(
   countryName: string,
   wiki: WikiContent,
+  options: { includePlaceholders?: boolean; locale?: Locale } = {},
 ): WikiSectionView[] {
-  return WIKI_SECTIONS.map((section) => {
-    const text = wiki[section.id]?.trim() ?? "";
-    const filled = text.length > 0;
+  const includePlaceholders = options.includePlaceholders ?? false;
+  const locale = options.locale ?? "ru";
+  const dictionary = getDictionary(locale);
+
+  return WIKI_SECTION_IDS.map((id) => {
+    const meta = dictionary.wiki.sections[id];
+    const raw = wiki[id]?.trim() ?? "";
+    const filled = isWikiSectionFilled(raw);
 
     return {
-      ...section,
+      id,
+      title: meta.title,
+      summary: meta.summary,
       isPlaceholder: !filled,
       text: filled
-        ? text
-        : `Раздел «${section.title}» для страны ${countryName} появится на следующем шаге наполнения.`,
-      subsections: filled ? getWikiSubsections(section.id, text) : [],
+        ? raw
+        : dictionary.wiki.placeholder
+            .replace("{title}", meta.title)
+            .replace("{name}", countryName),
+      subsections: filled ? getWikiSubsections(id, raw) : [],
     };
-  });
+  }).filter((section) => includePlaceholders || !section.isPlaceholder);
 }

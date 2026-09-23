@@ -3,6 +3,7 @@ import {
   getTravelProfile,
   seasonForMonth,
 } from "@/lib/assistant-knowledge";
+import type { Locale } from "@/lib/i18n/config";
 import { WIKI_SECTIONS, type WikiSectionId } from "@/lib/wiki";
 
 export type AssistantMessage = {
@@ -670,7 +671,13 @@ function buildTopicAnswer(
   );
 }
 
-export function createGreeting(): AssistantReply {
+export function createGreeting(locale: Locale = "ru"): AssistantReply {
+  if (locale === "en") {
+    return {
+      text: "Hi! Ask me a question — I’ll pull an answer from the Worldwide WIKI base.",
+    };
+  }
+
   return {
     text: "Привет! Задай мне вопрос — соберу ответ из базы Worldwide WIKI.",
   };

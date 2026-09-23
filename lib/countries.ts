@@ -1,10 +1,16 @@
 import type { OverviewFacts, WikiContent } from "@/lib/wiki";
 import { georgiaWiki } from "@/lib/wiki/georgia";
+import { landmarkImageForCode } from "@/lib/landmark-images";
+import { normalizeRegion } from "@/lib/regions";
 import worldCatalog from "@/lib/world-catalog.json";
+import worldCountries from "world-countries";
 
 export type Country = {
   slug: string;
+  /** Russian display name */
   name: string;
+  /** English display name (for EN locale + sorting) */
+  nameEn: string;
   mapName: string;
   /** English Natural Earth / world-atlas geography names for this country. */
   mapKeys: string[];
@@ -38,23 +44,37 @@ type CatalogCountry = {
 const PLACEHOLDER_IMAGE =
   "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1000&q=80";
 
-const richCountries: Country[] = [
+const ENGLISH_NAME_BY_CODE = new Map(
+  worldCountries.map((entry) => [entry.cca2.toUpperCase(), entry.name.common]),
+);
+
+function resolveEnglishName(
+  countryCode: string,
+  mapKeys: string[],
+  fallback: string,
+): string {
+  return (
+    ENGLISH_NAME_BY_CODE.get(countryCode.toUpperCase()) ??
+    mapKeys[0] ??
+    fallback
+  );
+}
+
+const richCountries: Array<Omit<Country, "nameEn">> = [
   {
     slug: "georgia",
     name: "Грузия",
     mapName: "Грузия",
     mapKeys: ["Georgia"],
     imageUrl:
-      "https://images.unsplash.com/photo-1565008576549-57569a49371d?auto=format&fit=crop&w=1000&q=80",
-    region: "Европа / Кавказ",
+      "https://images.unsplash.com/photo-1565008576549-57569a49371d?auto=format&fit=crop&w=1200&q=80",
+    region: "Европа",
     description:
       "Сюда едут не за идеальным сервисом, а за людьми, едой и ощущением, что жизнь тут чуть теплее.",
     highlights: [
       "Горы и море",
       "Грузинская кухня",
       "Винодельческие регионы",
-      "Тбилиси",
-      "Сванетия",
     ],
     countryCode: "GE",
     mapCoordinates: [41.715138, 44.827096],
@@ -76,7 +96,7 @@ const richCountries: Country[] = [
     mapName: "Португалия",
     mapKeys: ["Portugal"],
     imageUrl:
-      "https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/711c71ce-0ca3-50f7-88c2-9304bc2a61e3/6d1b7a56-e885-58b0-833c-407327eae0dc.jpg",
+      "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=1200&q=80",
     region: "Европа",
     description:
       "Сюда едут не за суетой столиц, а за океаном, светом и ощущением, что день может тянуться медленнее.",
@@ -103,11 +123,11 @@ const richCountries: Country[] = [
     mapName: "Южная Корея",
     mapKeys: ["South Korea"],
     imageUrl:
-      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=80",
     region: "Азия",
     description:
       "Сюда едут не за тишиной, а за плотным городским ритмом, ночными рынками и ощущением, что всё работает точно.",
-    highlights: ["Сеул", "K-pop и дорамы", "Корейская кухня"],
+    highlights: ["K-pop и дорамы", "Корейская кухня", "Современная культура"],
     countryCode: "KR",
     mapCoordinates: [37.566536, 126.977969],
     wiki: {
@@ -126,8 +146,8 @@ const richCountries: Country[] = [
     mapName: "Таиланд",
     mapKeys: ["Thailand"],
     imageUrl:
-      "https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=1000&q=80",
-    region: "Юго-Восточная Азия",
+      "https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=1200&q=80",
+    region: "Азия",
     description:
       "Сюда едут не за одним сценарием, а за морем, едой с тележки и ощущением, что день можно начать и босиком, и в гуле города.",
     highlights: ["Пляжи и острова", "Тайская кухня", "Храмы и национальные парки"],
@@ -149,11 +169,11 @@ const richCountries: Country[] = [
     mapName: "Аргентина",
     mapKeys: ["Argentina"],
     imageUrl:
-      "https://images.unsplash.com/photo-1589909202802-8f4aadce1849?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1589909202802-8f4aadce1849?auto=format&fit=crop&w=1200&q=80",
     region: "Южная Америка",
     description:
       "Сюда едут не за коротким отпуском, а за широкой страной, громкими ужинами и ощущением, что жизнь тут в полный голос.",
-    highlights: ["Буэнос-Айрес", "Патагония", "Танго и местная кухня"],
+    highlights: ["Патагония", "Танго и местная кухня", "Винные регионы"],
     countryCode: "AR",
     mapCoordinates: [-38.416097, -63.616672],
     wiki: {
@@ -169,15 +189,19 @@ const richCountries: Country[] = [
 ];
 
 function toCountry(entry: CatalogCountry): Country {
+  const code = entry.countryCode;
+  const landmark = landmarkImageForCode(code);
+
   return {
     slug: entry.slug,
     name: entry.name,
+    nameEn: resolveEnglishName(code, entry.mapKeys, entry.name),
     mapName: entry.mapName,
     mapKeys: entry.mapKeys,
-    region: entry.region,
+    region: normalizeRegion(entry.region),
     description: entry.description,
     highlights: entry.highlights,
-    imageUrl: entry.imageUrl || PLACEHOLDER_IMAGE,
+    imageUrl: landmark || entry.imageUrl || PLACEHOLDER_IMAGE,
     countryCode: entry.countryCode,
     mapCoordinates: [entry.mapCoordinates[0], entry.mapCoordinates[1]],
     wiki: entry.wiki ?? {},
@@ -190,8 +214,13 @@ function buildCountries(): Country[] {
   const byCode = new Map<string, Country>();
 
   for (const rich of richCountries) {
-    bySlug.set(rich.slug, rich);
-    byCode.set(rich.countryCode.toUpperCase(), rich);
+    const normalized: Country = {
+      ...rich,
+      nameEn: resolveEnglishName(rich.countryCode, rich.mapKeys, rich.name),
+      region: normalizeRegion(rich.region),
+    };
+    bySlug.set(normalized.slug, normalized);
+    byCode.set(normalized.countryCode.toUpperCase(), normalized);
   }
 
   for (const raw of worldCatalog.countries as CatalogCountry[]) {
@@ -201,8 +230,11 @@ function buildCountries(): Country[] {
     const rich = richByCode ?? richBySlug;
 
     if (rich) {
+      const landmark = landmarkImageForCode(stub.countryCode);
       const merged: Country = {
         ...rich,
+        region: normalizeRegion(rich.region),
+        imageUrl: landmark || rich.imageUrl || stub.imageUrl,
         mapKeys: Array.from(
           new Set([...(rich.mapKeys ?? []), ...(stub.mapKeys ?? [])]),
         ),

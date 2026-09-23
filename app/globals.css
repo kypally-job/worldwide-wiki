@@ -24,6 +24,7 @@ html.dark {
   --background: #0e0b14;
   --foreground: #f6eef8;
   --header-height: 64px;
+  --content-max: 1440px;
   --map-fill: #161122;
   --map-unknown: #2a243c;
   --map-stroke: #161122;
@@ -47,33 +48,38 @@ html.dark {
 }
 
 html.light {
-  --color-ink: #e8dde3;
-  --color-sand: #1c141c;
-  --color-sage: #7d6474;
-  --color-sage-dark: #64505e;
-  --color-panel: #f0e8ec;
-  --color-panel-strong: #f0e8ec;
-  --background: #e8dde3;
-  --foreground: #1c141c;
-  --map-fill: #e5dae1;
-  --map-unknown: #d8cad3;
-  --map-stroke: #e1d4dc;
-  --map-known: #e8a8be;
-  --map-known-hover: #db7f9d;
+  /* База — холодный камень/чернила, sakura только акцентом */
+  --color-ink: #e6e3eb;
+  --color-sand: #17131c;
+  --color-sage: #6a6170;
+  --color-sage-dark: #524a58;
+  --color-panel: #f5f3f7;
+  --color-panel-strong: #ffffff;
+  /* На светлом фоне «light»-вариант акцента читается как hover, не как пастель */
+  --color-terracotta-light: #c24e78;
+  --background: #ddd9e3;
+  --foreground: #17131c;
+  --map-fill: #d4d0db;
+  --map-unknown: #c5bfcc;
+  --map-stroke: #ddd9e3;
+  --map-known: #8f4d68;
+  --map-known-hover: #b4466e;
   --map-known-active: #d56089;
-  --panel: #f0e8ec;
-  --panel-strong: #f0e8ec;
-  --line: rgba(28, 20, 28, 0.1);
-  --line-soft: rgba(28, 20, 28, 0.07);
-  --line-strong: rgba(28, 20, 28, 0.14);
-  --surface-hover: rgba(213, 96, 137, 0.1);
-  --surface-chip: rgba(213, 96, 137, 0.08);
-  --overlay: rgba(28, 20, 28, 0.28);
-  --elevated-shadow: 0 18px 48px rgba(90, 45, 70, 0.12);
-  --body-glow-a: rgba(213, 96, 137, 0.1);
-  --body-glow-b: rgba(160, 110, 140, 0.18);
-  --hero-shade: rgba(14, 11, 20, 0.88);
-  --hero-mid: rgba(22, 14, 24, 0.62);
+  --panel: #f5f3f7;
+  --panel-strong: #ffffff;
+  --line: rgba(23, 19, 28, 0.12);
+  --line-soft: rgba(23, 19, 28, 0.08);
+  --line-strong: rgba(23, 19, 28, 0.2);
+  --surface-hover: rgba(23, 19, 28, 0.055);
+  --surface-chip: rgba(23, 19, 28, 0.04);
+  --overlay: rgba(23, 19, 28, 0.34);
+  --elevated-shadow:
+    0 22px 50px rgba(28, 22, 40, 0.14),
+    0 2px 10px rgba(28, 22, 40, 0.07);
+  --body-glow-a: rgba(72, 52, 96, 0.11);
+  --body-glow-b: rgba(213, 96, 137, 0.05);
+  --hero-shade: rgba(23, 19, 28, 0.9);
+  --hero-mid: rgba(40, 30, 48, 0.55);
   color-scheme: light;
 }
 
@@ -85,6 +91,13 @@ html {
   min-height: 100%;
   font-size: 16px;
   scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -104,6 +117,13 @@ body {
   font-family: var(--font-inter), Inter, Arial, Helvetica, sans-serif;
   font-size: 1rem;
   line-height: 1.6;
+}
+
+html.light body {
+  background:
+    radial-gradient(980px 460px at 92% -12%, var(--body-glow-a), transparent 58%),
+    radial-gradient(720px 420px at -10% 22%, var(--body-glow-b), transparent 54%),
+    linear-gradient(180deg, #e2dee8 0%, var(--background) 42%, #d8d4df 100%);
 }
 
 button,
@@ -289,12 +309,58 @@ img {
   display: none;
 }
 
+.scroll-progress__petal {
+  animation: scroll-petal-breathe 3.6s ease-in-out infinite;
+}
+
+@keyframes scroll-petal-breathe {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) rotate(-8deg) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(10deg) scale(1.08);
+  }
+}
+
 .motif-drift {
   animation: motif-drift 12s ease-in-out infinite;
 }
 
 .motif-fall {
   animation: motif-fall 18s linear infinite;
+}
+
+.nav-assistant {
+  box-shadow: inset 0 1px 0 rgba(246, 238, 248, 0.06);
+}
+
+.nav-assistant__spark {
+  animation: nav-assistant-spark 2.8s ease-in-out infinite;
+}
+
+.nav-assistant:hover .nav-assistant__spark,
+.nav-assistant:focus-visible .nav-assistant__spark,
+.nav-assistant--active .nav-assistant__spark {
+  animation: none;
+  opacity: 1;
+  box-shadow: 0 0 0 3px rgba(213, 96, 137, 0.22);
+}
+
+@keyframes nav-assistant-spark {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+html.light .nav-assistant {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55);
 }
 
 .map-random-btn {
@@ -407,7 +473,9 @@ img {
   .map-random-btn,
   .map-random-btn__icon,
   .sakura-intro,
-  .sakura-caret {
+  .sakura-caret,
+  .nav-assistant__spark,
+  .scroll-progress__petal {
     animation: none;
   }
 }

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import CountriesCatalog from "@/components/CountriesCatalog";
 
 export const metadata: Metadata = {
-  title: "Страны мира — Worldwide WIKI",
+  title: "Countries of the world — Worldwide WIKI",
   description:
-    "Каталог стран для путешествий, переезда, учёбы и жизни: визы, стоимость жизни, язык и безопасность.",
+    "A country catalog for travel, relocation, study, and life abroad: visas, cost of living, language, and safety.",
 };
 
 export default function CountriesPage() {

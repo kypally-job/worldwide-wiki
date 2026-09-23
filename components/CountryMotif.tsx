@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-type MotifLayer = "hero" | "page";
+type MotifLayer = "hero" | "page" | "card";
 
 type MotifItem = {
   node: ReactNode;
@@ -322,6 +322,17 @@ const motifs: Record<string, Record<MotifLayer, MotifItem[]>> = {
         className: "top-[88%] left-[6%] h-20 w-16 opacity-[0.16]",
       },
     ],
+    card: [
+      {
+        node: <Khinkali />,
+        className: "right-[6%] top-[12%] h-16 w-16 opacity-[0.38]",
+        drift: true,
+      },
+      {
+        node: <Grape />,
+        className: "bottom-[14%] left-[8%] h-12 w-8 opacity-[0.32]",
+      },
+    ],
   },
   portugal: {
     hero: [
@@ -372,6 +383,17 @@ const motifs: Record<string, Record<MotifLayer, MotifItem[]>> = {
       {
         node: <Azulejo />,
         className: "top-[82%] left-[5%] h-24 w-24 opacity-[0.16]",
+      },
+    ],
+    card: [
+      {
+        node: <Azulejo />,
+        className: "right-[8%] top-[14%] h-14 w-14 opacity-[0.36]",
+      },
+      {
+        node: <Wave />,
+        className: "bottom-[16%] left-[6%] h-7 w-28 opacity-[0.34]",
+        drift: true,
       },
     ],
   },
@@ -438,6 +460,17 @@ const motifs: Record<string, Record<MotifLayer, MotifItem[]>> = {
         fall: true,
       },
     ],
+    card: [
+      {
+        node: <Fan />,
+        className: "right-[4%] top-[10%] h-12 w-20 opacity-[0.36]",
+      },
+      {
+        node: <Petal />,
+        className: "bottom-[18%] left-[12%] h-8 w-6 opacity-[0.4]",
+        fall: true,
+      },
+    ],
   },
   thailand: {
     hero: [
@@ -491,6 +524,16 @@ const motifs: Record<string, Record<MotifLayer, MotifItem[]>> = {
         className: "top-[84%] right-[8%] h-16 w-20 opacity-[0.16]",
       },
     ],
+    card: [
+      {
+        node: <Lotus />,
+        className: "right-[6%] top-[12%] h-14 w-20 opacity-[0.36]",
+      },
+      {
+        node: <Chedi />,
+        className: "bottom-[10%] left-[8%] h-16 w-9 opacity-[0.3]",
+      },
+    ],
   },
   argentina: {
     hero: [
@@ -537,17 +580,165 @@ const motifs: Record<string, Record<MotifLayer, MotifItem[]>> = {
         className: "top-[90%] left-[6%] h-14 w-40 opacity-[0.14]",
       },
     ],
+    card: [
+      {
+        node: <Sun />,
+        className: "right-[8%] top-[10%] h-14 w-14 opacity-[0.38]",
+      },
+      {
+        node: <Mate />,
+        className: "bottom-[12%] left-[10%] h-12 w-10 opacity-[0.32]",
+      },
+    ],
   },
 };
+
+const REGION_CARD_MOTIFS: Record<string, MotifItem[]> = {
+  Европа: [
+    {
+      node: <Mountains />,
+      className: "bottom-[8%] right-[4%] h-10 w-28 opacity-[0.3]",
+    },
+    {
+      node: <Church />,
+      className: "right-[10%] top-[12%] h-12 w-10 opacity-[0.28]",
+    },
+  ],
+  Азия: [
+    {
+      node: <Lantern />,
+      className: "right-[10%] top-[10%] h-14 w-10 opacity-[0.32]",
+    },
+    {
+      node: <Fan />,
+      className: "bottom-[12%] left-[6%] h-9 w-16 opacity-[0.28]",
+    },
+  ],
+  "Ближний Восток": [
+    {
+      node: <Sun />,
+      className: "right-[8%] top-[10%] h-12 w-12 opacity-[0.32]",
+    },
+    {
+      node: <Wave />,
+      className: "bottom-[14%] left-[8%] h-6 w-24 opacity-[0.26]",
+    },
+  ],
+  Африка: [
+    {
+      node: <Sun />,
+      className: "right-[8%] top-[12%] h-14 w-14 opacity-[0.34]",
+    },
+    {
+      node: <Wave />,
+      className: "bottom-[12%] left-[6%] h-6 w-24 opacity-[0.26]",
+    },
+  ],
+  "Северная Америка": [
+    {
+      node: <Mountains />,
+      className: "bottom-[8%] right-[4%] h-10 w-28 opacity-[0.3]",
+    },
+    {
+      node: <Wave />,
+      className: "top-[16%] left-[8%] h-6 w-24 opacity-[0.26]",
+      drift: true,
+    },
+  ],
+  "Центральная Америка": [
+    {
+      node: <Wave />,
+      className: "bottom-[14%] right-[6%] h-7 w-28 opacity-[0.3]",
+      drift: true,
+    },
+    {
+      node: <Sun />,
+      className: "right-[12%] top-[12%] h-11 w-11 opacity-[0.28]",
+    },
+  ],
+  "Южная Америка": [
+    {
+      node: <Sun />,
+      className: "right-[8%] top-[10%] h-12 w-12 opacity-[0.32]",
+    },
+    {
+      node: <Mountains />,
+      className: "bottom-[8%] left-[6%] h-9 w-28 opacity-[0.28]",
+    },
+  ],
+  "Карибский бассейн": [
+    {
+      node: <Wave />,
+      className: "bottom-[14%] left-[8%] h-7 w-28 opacity-[0.34]",
+      drift: true,
+    },
+    {
+      node: <Sun />,
+      className: "right-[10%] top-[12%] h-11 w-11 opacity-[0.3]",
+    },
+  ],
+  Океания: [
+    {
+      node: <Wave />,
+      className: "bottom-[12%] right-[6%] h-7 w-28 opacity-[0.34]",
+      drift: true,
+    },
+    {
+      node: <Sun />,
+      className: "left-[10%] top-[14%] h-11 w-11 opacity-[0.28]",
+    },
+  ],
+  Антарктика: [
+    {
+      node: <Mountains />,
+      className: "bottom-[10%] left-1/2 h-10 w-32 -translate-x-1/2 opacity-[0.3]",
+    },
+  ],
+};
+
+const DEFAULT_CARD_MOTIFS: MotifItem[] = [
+  {
+    node: <Petal />,
+    className: "right-[12%] top-[14%] h-9 w-7 opacity-[0.32]",
+    fall: true,
+  },
+  {
+    node: <Wave />,
+    className: "bottom-[14%] left-[8%] h-6 w-24 opacity-[0.26]",
+  },
+];
+
+function resolveMotifItems(
+  slug: string,
+  layer: MotifLayer,
+  region?: string,
+): MotifItem[] | undefined {
+  const bySlug = motifs[slug]?.[layer];
+  if (bySlug?.length) {
+    return bySlug;
+  }
+
+  if (layer !== "card") {
+    return undefined;
+  }
+
+  if (region && REGION_CARD_MOTIFS[region]) {
+    return REGION_CARD_MOTIFS[region];
+  }
+
+  return DEFAULT_CARD_MOTIFS;
+}
 
 export default function CountryMotif({
   slug,
   layer = "hero",
+  region,
 }: {
   slug: string;
   layer?: MotifLayer;
+  region?: string;
 }) {
-  const items = motifs[slug]?.[layer];
+  const items = resolveMotifItems(slug, layer, region);
 
   if (!items) {
     return null;

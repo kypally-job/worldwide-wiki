@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import AssistantWorkspace from "@/components/AssistantWorkspace";
 
 export const metadata: Metadata = {
-  title: "Ассистент — Worldwide WIKI",
+  title: "Assistant — Worldwide WIKI",
   description:
-    "WW Ассистент Сакура: подбор стран, сезонов и разделов базы Worldwide WIKI.",
+    "WW Assistant Sakura: country picks, seasons, and Worldwide WIKI knowledge sections.",
 };
 
 export default function AssistantPage() {

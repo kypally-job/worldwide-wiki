@@ -1,10 +1,12 @@
-import SectionPlaceholder from "@/components/SectionPlaceholder";
+"use client";
+
+import LocalizedSectionPage from "@/components/LocalizedSectionPage";
 
 export default function NotFoundPage() {
   return (
-    <SectionPlaceholder
-      title="Страница не найдена"
-      description="Такого раздела пока нет. Вернись на карту и выбери страну из каталога."
+    <LocalizedSectionPage
+      titleKey="placeholders.notFoundTitle"
+      descriptionKey="placeholders.notFoundDescription"
     />
   );
 }

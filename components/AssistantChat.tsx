@@ -10,6 +10,8 @@ import {
   type TripSlots,
 } from "@/lib/assistant";
 import { saveDraft } from "@/lib/assistant-chat";
+import type { Locale } from "@/lib/i18n/config";
+import { useT } from "@/lib/i18n/LocaleProvider";
 
 const AVATAR_SRC = "/mascot-sakura-avatar-v2.jpg";
 
@@ -17,7 +19,10 @@ type AssistantChatProps = {
   variant: "dock" | "page";
   messages: AssistantMessage[];
   slots: TripSlots | null;
-  onMessagesChange: (messages: AssistantMessage[], slots: TripSlots | null) => void;
+  onMessagesChange: (
+    messages: AssistantMessage[],
+    slots: TripSlots | null,
+  ) => void;
   onClose?: () => void;
   showFullChatOffer?: boolean;
 };
@@ -30,6 +35,7 @@ export default function AssistantChat({
   onClose,
   showFullChatOffer = true,
 }: AssistantChatProps) {
+  const t = useT();
   const listRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const inputId = useId();
@@ -78,7 +84,10 @@ export default function AssistantChat({
       offerFullChat: reply.offerFullChat,
     };
 
-    onMessagesChange([...messages, userMessage, assistantMessage], reply.slots ?? slots);
+    onMessagesChange(
+      [...messages, userMessage, assistantMessage],
+      reply.slots ?? slots,
+    );
     setDraft("");
   };
 
@@ -104,15 +113,17 @@ export default function AssistantChat({
         </span>
         <div className="min-w-0">
           <p className="font-heading text-[1.15rem] leading-none tracking-tight text-sand">
-            Сакура
+            {t("assistant.name")}
           </p>
-          <p className="mt-1 text-[12px] text-sand/50">WW Ассистент</p>
+          <p className="mt-1 text-[12px] text-sand/50">
+            {t("assistant.subtitle")}
+          </p>
         </div>
         {onClose ? (
           <button
             type="button"
             onClick={onClose}
-            aria-label="Закрыть чат"
+            aria-label={t("assistant.closeChat")}
             className="ml-auto flex h-8 w-8 items-center justify-center rounded-md text-sand/45 transition hover:text-sand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta"
           >
             <span className="relative block h-3.5 w-3.5" aria-hidden="true">
@@ -160,7 +171,7 @@ export default function AssistantChat({
                 }}
                 className="inline-flex max-w-[92%] items-center justify-center rounded-xl border border-terracotta/40 bg-terracotta/10 px-3 py-2 text-[13px] font-medium text-terracotta transition hover:bg-terracotta/16 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta"
               >
-                Открыть полный чат
+                {t("assistant.openFullChat")}
               </Link>
             ) : null}
           </div>
@@ -175,20 +186,20 @@ export default function AssistantChat({
         }}
       >
         <label htmlFor={inputId} className="sr-only">
-          Сообщение ассистенту
+          {t("assistant.messageLabel")}
         </label>
         <input
           id={inputId}
           ref={inputRef}
           value={draft}
           onChange={(event) => setDraft(event.target.value)}
-          placeholder='Например, "Хочу отдохнуть на море"'
+          placeholder={t("assistant.placeholder")}
           autoComplete="off"
           className="min-w-0 flex-1 bg-transparent py-1.5 text-sm text-sand outline-none placeholder:text-[11px] placeholder:text-sand/40"
         />
         <button
           type="submit"
-          aria-label="Отправить"
+          aria-label={t("assistant.send")}
           className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-terracotta text-white transition hover:bg-terracotta-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta-light"
         >
           <svg
@@ -210,8 +221,8 @@ export default function AssistantChat({
   );
 }
 
-export function createHelloMessage(): AssistantMessage {
-  const greeting = createGreeting();
+export function createHelloMessage(locale: Locale = "ru"): AssistantMessage {
+  const greeting = createGreeting(locale);
 
   return {
     id: "hello",
