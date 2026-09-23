@@ -18,8 +18,9 @@ import {
   titleFromMessages,
   type ChatThread,
 } from "@/lib/assistant-chat";
+import { useLocale, useT } from "@/lib/i18n/LocaleProvider";
 
-function ensureThread(): ChatThread {
+function ensureThread(emptyTitle: string, locale: "ru" | "en"): ChatThread {
   const activeId = getActiveThreadId();
   const existing = activeId ? getThread(activeId) : undefined;
 
@@ -34,15 +35,20 @@ function ensureThread(): ChatThread {
   }
 
   return createThread({
-    messages: [createHelloMessage()],
-    title: "Новый чат",
+    messages: [createHelloMessage(locale)],
+    title: emptyTitle,
   });
 }
 
 export default function AssistantWorkspace() {
+  const { locale } = useLocale();
+  const t = useT();
+  const emptyTitle = t("assistant.newChat");
   const [signedIn, setSignedInState] = useState(false);
   const [activeId, setActiveId] = useState<string | null>(null);
-  const [messages, setMessages] = useState<AssistantMessage[]>([createHelloMessage()]);
+  const [messages, setMessages] = useState<AssistantMessage[]>([
+    createHelloMessage(locale),
+  ]);
   const [slots, setSlots] = useState<TripSlots | null>(null);
   const [ready, setReady] = useState(false);
 
@@ -56,6 +62,9 @@ export default function AssistantWorkspace() {
         setMessages(draft.messages);
         setSlots(draft.slots);
         clearDraft();
+      } else {
+        setMessages([createHelloMessage(locale)]);
+        setSlots(null);
       }
       setActiveId(null);
       setReady(true);
@@ -67,7 +76,7 @@ export default function AssistantWorkspace() {
       const thread = createThread({
         messages: draft.messages,
         slots: draft.slots,
-        title: titleFromMessages(draft.messages),
+        title: titleFromMessages(draft.messages, emptyTitle),
       });
       clearDraft();
       setActiveId(thread.id);
@@ -77,9 +86,11 @@ export default function AssistantWorkspace() {
       return;
     }
 
-    const thread = ensureThread();
+    const thread = ensureThread(emptyTitle, locale);
     setActiveId(thread.id);
-    setMessages(thread.messages.length ? thread.messages : [createHelloMessage()]);
+    setMessages(
+      thread.messages.length ? thread.messages : [createHelloMessage(locale)],
+    );
     setSlots(thread.slots);
     setReady(true);
   };
@@ -87,7 +98,17 @@ export default function AssistantWorkspace() {
   useEffect(() => {
     sync();
     return subscribeAssistantChat(sync);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- sync on mount / auth events
   }, []);
+
+  useEffect(() => {
+    setMessages((current) => {
+      if (current.length === 1 && current[0]?.id === "hello") {
+        return [createHelloMessage(locale)];
+      }
+      return current;
+    });
+  }, [locale]);
 
   useEffect(() => {
     const previousOverflow = document.body.style.overflow;
@@ -98,7 +119,10 @@ export default function AssistantWorkspace() {
     };
   }, []);
 
-  const persist = (nextMessages: AssistantMessage[], nextSlots: TripSlots | null) => {
+  const persist = (
+    nextMessages: AssistantMessage[],
+    nextSlots: TripSlots | null,
+  ) => {
     setMessages(nextMessages);
     setSlots(nextSlots);
 
@@ -110,7 +134,7 @@ export default function AssistantWorkspace() {
     if (activeId && getThread(activeId)) {
       const saved = saveThread({
         id: activeId,
-        title: titleFromMessages(nextMessages),
+        title: titleFromMessages(nextMessages, emptyTitle),
         updatedAt: new Date().toISOString(),
         messages: nextMessages,
         slots: nextSlots,
@@ -122,7 +146,7 @@ export default function AssistantWorkspace() {
     const created = createThread({
       messages: nextMessages,
       slots: nextSlots,
-      title: titleFromMessages(nextMessages),
+      title: titleFromMessages(nextMessages, emptyTitle),
     });
     setActiveId(created.id);
   };
@@ -130,7 +154,7 @@ export default function AssistantWorkspace() {
   if (!ready) {
     return (
       <div className="flex h-[calc(100dvh-var(--header-height))] items-center justify-center text-sand/50">
-        Загрузка ассистента…
+        {t("assistant.loading")}
       </div>
     );
   }

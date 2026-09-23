@@ -10,6 +10,7 @@ import {
 } from "react";
 import { useSearchParams } from "next/navigation";
 import WorldMap from "@/components/WorldMap";
+import { useT } from "@/lib/i18n/LocaleProvider";
 import {
   isJourneyStarted,
   markJourneyStarted,
@@ -27,6 +28,7 @@ export default function HomePage() {
 }
 
 function HomeExperience() {
+  const t = useT();
   const searchParams = useSearchParams();
   const countrySlug = searchParams.get("country") ?? undefined;
   const skipIntro = Boolean(countrySlug);
@@ -141,15 +143,14 @@ function HomeExperience() {
               id={titleId}
               className="mt-3 font-heading text-3xl font-normal leading-tight tracking-tight"
             >
-              Исследуй мир по-новому
+              {t("intro.title")}
             </h1>
 
             <p
               id={descriptionId}
               className="mt-4 text-base leading-7 text-sand/75"
             >
-              Находи страны, людей, полезные сервисы и события на одной
-              интерактивной карте.
+              {t("intro.lead")}
             </p>
 
             <button
@@ -158,7 +159,7 @@ function HomeExperience() {
               onClick={markJourneyStarted}
               className="mt-7 flex min-h-12 w-full items-center justify-center rounded-lg bg-terracotta px-5 py-3 text-sm font-semibold text-white transition hover:bg-terracotta-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta-light focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
             >
-              Начать путешествие
+              {t("intro.cta")}
               <span className="ml-2 text-lg" aria-hidden="true">
                 →
               </span>

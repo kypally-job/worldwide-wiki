@@ -124,7 +124,7 @@ export function createThread(
 ): ChatThread {
   const thread: ChatThread = {
     id: `t-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
-    title: seed?.title?.trim() || "Новый чат",
+    title: seed?.title?.trim() || "New chat",
     updatedAt: new Date().toISOString(),
     messages: seed?.messages ?? [],
     slots: seed?.slots ?? null,
@@ -160,10 +160,13 @@ export function deleteThread(id: string) {
   }
 }
 
-export function titleFromMessages(messages: AssistantMessage[]) {
+export function titleFromMessages(
+  messages: AssistantMessage[],
+  emptyTitle = "New chat",
+) {
   const firstUser = messages.find((message) => message.role === "user");
   if (!firstUser) {
-    return "Новый чат";
+    return emptyTitle;
   }
 
   const text = firstUser.text.trim().replace(/\s+/g, " ");

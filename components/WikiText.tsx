@@ -57,7 +57,7 @@ function Block({
     return (
       <h3
         id={heading.id}
-        className="mt-6 scroll-mt-[calc(var(--header-height)+0.85rem)] font-heading text-[1.15rem] font-normal tracking-tight text-sand"
+        className="mt-5 scroll-mt-[calc(var(--header-height)+0.85rem)] font-heading text-[1.08rem] font-normal tracking-tight text-sand"
       >
         {heading.title}
       </h3>
@@ -70,7 +70,7 @@ function Block({
 
   if (isList) {
     return (
-      <ul className="mt-3 list-disc space-y-1.5 pl-5 text-[1.02rem] leading-[1.65] text-sand/78">
+      <ul className="mt-2.5 list-disc space-y-1 pl-5 text-[0.98rem] leading-[1.6] text-sand/78">
         {lines.map((line) => (
           <li key={line}>
             <LinkedText text={line.slice(2)} />
@@ -81,7 +81,7 @@ function Block({
   }
 
   return (
-    <p className="mt-3 text-[1.02rem] leading-[1.65] text-sand/78">
+    <p className="mt-2.5 text-[0.98rem] leading-[1.6] text-sand/78">
       <LinkedText text={block} />
     </p>
   );

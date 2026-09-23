@@ -11,6 +11,22 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "d2u1z1lopyfwlx.cloudfront.net",
       },
+      {
+        protocol: "https",
+        hostname: "i.ytimg.com",
+      },
+      {
+        protocol: "https",
+        hostname: "commons.wikimedia.org",
+      },
+      {
+        protocol: "https",
+        hostname: "upload.wikimedia.org",
+      },
+      {
+        protocol: "https",
+        hostname: "thumb.wikimedia.org",
+      },
     ],
   },
 };

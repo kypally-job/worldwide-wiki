@@ -1,23 +1,30 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useT } from "@/lib/i18n/LocaleProvider";
 
-const ALL_REGIONS = "Все регионы";
+type RegionOption = {
+  value: string;
+  label: string;
+};
 
 type RegionFilterProps = {
-  regions: string[];
+  options: RegionOption[];
   value: string;
   onChange: (value: string) => void;
 };
 
 export default function RegionFilter({
-  regions,
+  options,
   value,
   onChange,
 }: RegionFilterProps) {
+  const t = useT();
   const [isOpen, setIsOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
-  const options = [ALL_REGIONS, ...regions];
+  const selected =
+    options.find((item) => item.value === value) ?? options[0];
+  const regionLabel = t("catalog.region");
 
   useEffect(() => {
     if (!isOpen) {
@@ -48,44 +55,46 @@ export default function RegionFilter({
   return (
     <div className="relative" ref={rootRef}>
       <span className="mb-2 block text-[13px] font-medium tracking-wide text-sand/50">
-        Регион
+        {regionLabel}
       </span>
 
       <button
         type="button"
         aria-haspopup="listbox"
         aria-expanded={isOpen}
-        aria-label="Регион"
+        aria-label={regionLabel}
         onClick={() => setIsOpen((open) => !open)}
         className="flex w-full items-center justify-between border-b border-line-strong bg-transparent py-2.5 text-left text-sand outline-none transition hover:border-terracotta/50 focus-visible:border-terracotta"
       >
-        <span>{value}</span>
+        <span>{selected?.label}</span>
       </button>
 
       {isOpen && (
         <div
           role="listbox"
-          aria-label="Регион"
-          className="absolute left-0 right-0 top-full z-30 mt-2 overflow-hidden rounded-xl border border-line bg-panel p-1 shadow-elevated"
+          aria-label={regionLabel}
+          className="absolute left-0 right-0 top-full z-30 mt-2 max-h-72 overflow-y-auto rounded-xl border border-line bg-panel p-1 shadow-elevated"
         >
           {options.map((item) => {
-            const isSelected = item === value;
+            const isSelected = item.value === value;
 
             return (
               <button
-                key={item}
+                key={item.value}
                 type="button"
                 role="option"
                 aria-selected={isSelected}
                 onClick={() => {
-                  onChange(item);
+                  onChange(item.value);
                   setIsOpen(false);
                 }}
                 className={`flex w-full rounded-lg px-3 py-2.5 text-left text-sm transition hover:bg-surface-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta ${
-                  isSelected ? "bg-surface-hover text-terracotta" : "text-sand/80"
+                  isSelected
+                    ? "bg-surface-hover text-terracotta"
+                    : "text-sand/80"
                 }`}
               >
-                {item}
+                {item.label}
               </button>
             );
           })}

@@ -1,10 +1,10 @@
-import SectionPlaceholder from "@/components/SectionPlaceholder";
+import LocalizedSectionPage from "@/components/LocalizedSectionPage";
 
 export default function EventsPage() {
   return (
-    <SectionPlaceholder
-      title="Афиша"
-      description="События по странам появятся здесь. Пока можно исследовать карту и выбрать направление."
+    <LocalizedSectionPage
+      titleKey="placeholders.eventsTitle"
+      descriptionKey="placeholders.eventsDescription"
     />
   );
 }

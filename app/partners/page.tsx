@@ -1,10 +1,10 @@
-import SectionPlaceholder from "@/components/SectionPlaceholder";
+import LocalizedSectionPage from "@/components/LocalizedSectionPage";
 
 export default function PartnersPage() {
   return (
-    <SectionPlaceholder
-      title="Партнёры"
-      description="Раздел для организаций и сервисов, которые помогают жить и путешествовать. Контент ещё в работе."
+    <LocalizedSectionPage
+      titleKey="placeholders.partnersTitle"
+      descriptionKey="placeholders.partnersDescription"
     />
   );
 }

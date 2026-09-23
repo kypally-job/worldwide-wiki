@@ -8,6 +8,7 @@ import {
   setTheme,
   type Theme,
 } from "@/lib/theme";
+import { useT } from "@/lib/i18n/LocaleProvider";
 
 function SunIcon() {
   return (
@@ -44,6 +45,7 @@ function MoonIcon() {
 }
 
 export default function ThemeToggle() {
+  const t = useT();
   const [theme, setThemeState] = useState<Theme>("dark");
   const [ready, setReady] = useState(false);
 
@@ -59,8 +61,8 @@ export default function ThemeToggle() {
   return (
     <button
       type="button"
-      aria-label={isLight ? "Включить тёмную тему" : "Включить светлую тему"}
-      title={isLight ? "Тёмная тема" : "Светлая тема"}
+      aria-label={isLight ? t("theme.toDark") : t("theme.toLight")}
+      title={isLight ? t("theme.dark") : t("theme.light")}
       disabled={!ready}
       onClick={() => {
         const next: Theme = isLight ? "dark" : "light";
