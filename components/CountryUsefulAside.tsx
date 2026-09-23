@@ -142,6 +142,7 @@ function CountryVideos({ country }: { country: Country }) {
                       alt=""
                       fill
                       sizes="124px"
+                      unoptimized
                       className="object-cover transition duration-300 group-hover:scale-[1.04]"
                     />
                   )}
