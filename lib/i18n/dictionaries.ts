@@ -7,6 +7,7 @@ export type Dictionary = {
     siteDescription: string;
   };
   nav: {
+    countries: string;
     people: string;
     volunteering: string;
     events: string;
@@ -146,6 +147,7 @@ export type Dictionary = {
     signedIn: string;
     signOut: string;
     toAssistant: string;
+    toCountries: string;
   };
   assistant: {
     title: string;
@@ -177,6 +179,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "Каталог стран, специалистов, волонтёрских проектов и сообщества путешественников.",
     },
     nav: {
+      countries: "Страны",
       people: "Люди",
       volunteering: "Волонтёрство",
       events: "Афиша",
@@ -337,12 +340,13 @@ export const dictionaries: Record<Locale, Dictionary> = {
     },
     auth: {
       title: "Вход",
-      lead: "Полный кабинет подключим позже. Пока можно включить демо-вход: история чатов с ассистентом будет сохраняться на этом устройстве.",
+      lead: "Полный кабинет подключим позже. Пока можно включить демо-вход на этом устройстве.",
       demo: "Войти (демо)",
       continue: "Продолжить без входа",
       signedIn: "Вы вошли (демо).",
       signOut: "Выйти",
       toAssistant: "К ассистенту",
+      toCountries: "К каталогу стран",
     },
     assistant: {
       title: "Ассистент Sakura",
@@ -386,6 +390,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         "A catalog of countries, specialists, volunteering projects, and traveler community.",
     },
     nav: {
+      countries: "Countries",
       people: "People",
       volunteering: "Volunteering",
       events: "Events",
@@ -545,12 +550,13 @@ export const dictionaries: Record<Locale, Dictionary> = {
     },
     auth: {
       title: "Sign in",
-      lead: "A full account area will come later. For now you can use demo sign-in: assistant chat history stays on this device.",
+      lead: "A full account area will come later. For now you can use demo sign-in on this device.",
       demo: "Sign in (demo)",
       continue: "Continue without signing in",
       signedIn: "You are signed in (demo).",
       signOut: "Sign out",
       toAssistant: "To assistant",
+      toCountries: "To countries catalog",
     },
     assistant: {
       title: "Sakura assistant",
