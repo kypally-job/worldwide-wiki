@@ -7,6 +7,7 @@ import {
   setSignedIn,
   subscribeAssistantChat,
 } from "@/lib/assistant-chat";
+import { FEATURES } from "@/lib/features";
 import { useT } from "@/lib/i18n/LocaleProvider";
 
 export default function AuthPage() {
@@ -30,10 +31,12 @@ export default function AuthPage() {
           <p className="text-[14px] text-terracotta">{t("auth.signedIn")}</p>
           <div className="flex flex-wrap gap-2">
             <Link
-              href="/assistant"
+              href={FEATURES.assistant ? "/assistant" : "/countries"}
               className="rounded-lg bg-terracotta px-4 py-2.5 text-[14px] font-medium text-white transition hover:bg-terracotta-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta-light"
             >
-              {t("auth.toAssistant")}
+              {FEATURES.assistant
+                ? t("auth.toAssistant")
+                : t("auth.toCountries")}
             </Link>
             <button
               type="button"

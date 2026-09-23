@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import BarsIcon from "@/components/BarsIcon";
 import ThemeToggle from "@/components/ThemeToggle";
+import { FEATURES } from "@/lib/features";
 import { useLocale } from "@/lib/i18n/LocaleProvider";
 import type { Locale } from "@/lib/i18n/config";
 
@@ -28,6 +29,7 @@ export default function Header() {
 
   const navItems = useMemo(
     () => [
+      { label: t("nav.countries"), href: "/countries" },
       { label: t("nav.people"), href: "/people" },
       { label: t("nav.volunteering"), href: "/volunteering" },
       { label: t("nav.events"), href: "/events" },
@@ -37,7 +39,6 @@ export default function Header() {
   );
 
   const assistantHref = "/assistant";
-  const assistantLabel = t("nav.assistant");
   const isAssistantActive =
     pathname === assistantHref || pathname.startsWith(`${assistantHref}/`);
 
@@ -90,7 +91,7 @@ export default function Header() {
         aria-hidden="true"
       />
 
-      <div className="relative mx-auto flex h-full max-w-[var(--content-max)] items-center justify-between gap-4 px-5 sm:px-6 lg:px-8">
+      <div className="relative mx-auto flex h-full max-w-[var(--content-max)] items-center justify-between gap-3 px-5 sm:gap-4 sm:px-6 lg:px-8">
         <Link
           href="/"
           onClick={closeMenus}
@@ -99,7 +100,7 @@ export default function Header() {
           Worldwide WIKI
         </Link>
 
-        <nav className="absolute inset-y-0 left-1/2 hidden -translate-x-1/2 items-center gap-0.5 lg:flex">
+        <nav className="absolute inset-y-0 left-1/2 hidden -translate-x-1/2 items-center gap-1 lg:flex">
           {navItems.map((item) => {
             const isActive =
               pathname === item.href || pathname.startsWith(`${item.href}/`);
@@ -109,10 +110,10 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={closeMenus}
-                className={`relative flex h-[var(--header-height)] items-center px-2.5 text-[14px] transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta-light ${
+                className={`relative flex h-[var(--header-height)] items-center px-3 text-[14px] tracking-wide transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta-light ${
                   isActive
-                    ? "text-sand after:absolute after:inset-x-2.5 after:bottom-0 after:h-px after:bg-terracotta"
-                    : "text-sand/50 hover:text-sand"
+                    ? "text-sand after:absolute after:inset-x-3 after:bottom-0 after:h-px after:bg-terracotta"
+                    : "text-sand/55 hover:text-sand"
                 }`}
               >
                 {item.label}
@@ -120,92 +121,93 @@ export default function Header() {
             );
           })}
 
-          <span
-            className="mx-2 h-4 w-px bg-[var(--line-strong)]"
-            aria-hidden="true"
-          />
-
-          <Link
-            href={assistantHref}
-            onClick={closeMenus}
-            className={`nav-assistant group relative flex h-9 items-center gap-2 rounded-lg border px-3 text-[13px] font-medium tracking-wide transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta-light ${
-              isAssistantActive
-                ? "nav-assistant--active border-terracotta/55 bg-terracotta/18 text-terracotta-light"
-                : "border-terracotta/35 bg-terracotta/[0.08] text-terracotta hover:border-terracotta/55 hover:bg-terracotta/14 hover:text-terracotta-light"
-            }`}
-          >
-            <SakuraMark className="h-3.5 w-3.5 shrink-0 opacity-90 transition group-hover:opacity-100" />
-            <span>{assistantLabel}</span>
-            <span
-              className="nav-assistant__spark pointer-events-none absolute -right-0.5 -top-0.5 h-1.5 w-1.5 rounded-full bg-terracotta"
-              aria-hidden="true"
-            />
-          </Link>
-        </nav>
-
-        <div className="relative z-10 flex shrink-0 items-center gap-1.5 sm:gap-2">
-          <div className="flex items-center gap-1">
-            <ThemeToggle />
-
-            <div className="relative">
-              <button
-                type="button"
-                onClick={() => {
-                  setIsMobileMenuOpen(false);
-                  setIsLanguageOpen((isOpen) => !isOpen);
-                }}
-                className="flex h-9 w-9 items-center justify-center rounded-md text-sm text-sand/70 transition hover:bg-surface-hover hover:text-sand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta-light sm:w-auto sm:gap-2 sm:px-2"
-                aria-label={t("nav.language")}
-                aria-expanded={isLanguageOpen}
-                aria-haspopup="listbox"
+          {FEATURES.assistant && (
+            <>
+              <span
+                className="mx-1.5 h-4 w-px bg-[var(--line-strong)]"
+                aria-hidden="true"
+              />
+              <Link
+                href={assistantHref}
+                onClick={closeMenus}
+                className={`nav-assistant group relative flex h-9 items-center gap-2 rounded-lg border px-3 text-[13px] font-medium tracking-wide transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta-light ${
+                  isAssistantActive
+                    ? "nav-assistant--active border-terracotta/55 bg-terracotta/18 text-terracotta-light"
+                    : "border-terracotta/35 bg-terracotta/[0.08] text-terracotta hover:border-terracotta/55 hover:bg-terracotta/14 hover:text-terracotta-light"
+                }`}
               >
+                <SakuraMark className="h-3.5 w-3.5 shrink-0 opacity-90 transition group-hover:opacity-100" />
+                <span>{t("nav.assistant")}</span>
                 <span
-                  className={`fi fi-${selectedLanguage.code} shrink-0 rounded-[2px]`}
+                  className="nav-assistant__spark pointer-events-none absolute -right-0.5 -top-0.5 h-1.5 w-1.5 rounded-full bg-terracotta"
                   aria-hidden="true"
                 />
-                <span className="hidden sm:inline">
-                  {selectedLanguage.shortLabel}
-                </span>
-              </button>
+              </Link>
+            </>
+          )}
+        </nav>
 
-              {isLanguageOpen && (
-                <div
-                  role="listbox"
-                  aria-label={t("nav.language")}
-                  className="absolute right-0 top-full z-[100] mt-2 min-w-48 overflow-hidden rounded-xl border border-line bg-panel p-1 shadow-elevated"
-                >
-                  {languages.map((item) => (
-                    <button
-                      key={item.value}
-                      type="button"
-                      role="option"
-                      aria-selected={item.value === locale}
-                      onClick={() => {
-                        setLocale(item.value);
-                        setIsLanguageOpen(false);
-                      }}
-                      className={`flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-left text-sm transition hover:bg-surface-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta ${
-                        item.value === locale
-                          ? "bg-surface-hover text-terracotta"
-                          : "text-sand/80"
-                      }`}
-                    >
-                      <span
-                        className={`fi fi-${item.code} shrink-0 rounded-[2px]`}
-                        aria-hidden="true"
-                      />
-                      <span>{item.label}</span>
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
+        <div className="relative z-10 flex shrink-0 items-center gap-1 sm:gap-1.5">
+          <ThemeToggle />
+
+          <div className="relative">
+            <button
+              type="button"
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                setIsLanguageOpen((isOpen) => !isOpen);
+              }}
+              className="flex h-9 w-9 items-center justify-center rounded-md text-sm text-sand/70 transition hover:bg-surface-hover hover:text-sand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta-light sm:w-auto sm:gap-2 sm:px-2.5"
+              aria-label={t("nav.language")}
+              aria-expanded={isLanguageOpen}
+              aria-haspopup="listbox"
+            >
+              <span
+                className={`fi fi-${selectedLanguage.code} shrink-0 rounded-[2px]`}
+                aria-hidden="true"
+              />
+              <span className="hidden sm:inline">
+                {selectedLanguage.shortLabel}
+              </span>
+            </button>
+
+            {isLanguageOpen && (
+              <div
+                role="listbox"
+                aria-label={t("nav.language")}
+                className="absolute right-0 top-full z-[100] mt-2 min-w-48 overflow-hidden rounded-xl border border-line bg-panel p-1 shadow-elevated"
+              >
+                {languages.map((item) => (
+                  <button
+                    key={item.value}
+                    type="button"
+                    role="option"
+                    aria-selected={item.value === locale}
+                    onClick={() => {
+                      setLocale(item.value);
+                      setIsLanguageOpen(false);
+                    }}
+                    className={`flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-left text-sm transition hover:bg-surface-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta ${
+                      item.value === locale
+                        ? "bg-surface-hover text-terracotta"
+                        : "text-sand/80"
+                    }`}
+                  >
+                    <span
+                      className={`fi fi-${item.code} shrink-0 rounded-[2px]`}
+                      aria-hidden="true"
+                    />
+                    <span>{item.label}</span>
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
           <Link
             href="/auth"
             onClick={closeMenus}
-            className="ml-0.5 flex h-9 items-center rounded-md bg-terracotta px-2.5 text-sm font-medium text-white transition hover:bg-terracotta-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta-light focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-ink)] sm:ml-1 sm:px-3"
+            className="ml-0.5 flex h-9 items-center rounded-md border border-line bg-transparent px-2.5 text-sm font-medium text-sand/85 transition hover:border-terracotta/45 hover:text-terracotta focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta-light sm:ml-1 sm:px-3"
           >
             {t("nav.login")}
           </Link>
@@ -229,7 +231,7 @@ export default function Header() {
 
       {isMobileMenuOpen && (
         <nav className="absolute inset-x-0 top-full z-[80] border-b border-line bg-ink/96 py-2 shadow-elevated backdrop-blur-xl lg:hidden">
-          <div className="mx-auto max-w-[var(--content-max)] space-y-1 px-5 sm:px-6">
+          <div className="mx-auto max-w-[var(--content-max)] space-y-0.5 px-5 sm:px-6">
             {navItems.map((item) => {
               const isActive =
                 pathname === item.href || pathname.startsWith(`${item.href}/`);
@@ -250,22 +252,24 @@ export default function Header() {
               );
             })}
 
-            <Link
-              href={assistantHref}
-              onClick={closeMenus}
-              className={`nav-assistant group mt-1 flex items-center gap-2.5 rounded-lg border px-3 py-2.5 text-[15px] font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta-light ${
-                isAssistantActive
-                  ? "nav-assistant--active border-terracotta/55 bg-terracotta/18 text-terracotta-light"
-                  : "border-terracotta/35 bg-terracotta/[0.08] text-terracotta hover:border-terracotta/55 hover:bg-terracotta/14"
-              }`}
-            >
-              <SakuraMark className="h-4 w-4 shrink-0" />
-              <span>{assistantLabel}</span>
-              <span
-                className="nav-assistant__spark ml-auto h-1.5 w-1.5 rounded-full bg-terracotta"
-                aria-hidden="true"
-              />
-            </Link>
+            {FEATURES.assistant && (
+              <Link
+                href={assistantHref}
+                onClick={closeMenus}
+                className={`nav-assistant group mt-1 flex items-center gap-2.5 rounded-lg border px-3 py-2.5 text-[15px] font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta-light ${
+                  isAssistantActive
+                    ? "nav-assistant--active border-terracotta/55 bg-terracotta/18 text-terracotta-light"
+                    : "border-terracotta/35 bg-terracotta/[0.08] text-terracotta hover:border-terracotta/55 hover:bg-terracotta/14"
+                }`}
+              >
+                <SakuraMark className="h-4 w-4 shrink-0" />
+                <span>{t("nav.assistant")}</span>
+                <span
+                  className="nav-assistant__spark ml-auto h-1.5 w-1.5 rounded-full bg-terracotta"
+                  aria-hidden="true"
+                />
+              </Link>
+            )}
           </div>
         </nav>
       )}

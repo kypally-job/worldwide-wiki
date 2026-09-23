@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import SakuraAssistant from "@/components/SakuraAssistant";
 import ScrollProgress from "@/components/ScrollProgress";
 import SiteBackdrop from "@/components/SiteBackdrop";
+import { FEATURES } from "@/lib/features";
 import { themeInitScript } from "@/lib/theme";
 
 const inter = Inter({
@@ -38,7 +39,7 @@ export default function RootLayout({
             <div className="relative z-10">{children}</div>
           </main>
           <ScrollProgress />
-          <SakuraAssistant />
+          {FEATURES.assistant ? <SakuraAssistant /> : null}
         </AppProviders>
       </body>
     </html>
